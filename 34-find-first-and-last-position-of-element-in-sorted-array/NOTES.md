@@ -35,4 +35,4 @@ else:
 go to right
 2. else: go to left
 ​
-left - 1
+left
