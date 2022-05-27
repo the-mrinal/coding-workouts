@@ -14,3 +14,9 @@ given that is minimum
 ​
 Hence we will start with min counr and move up to n.
 ​
+**Intuition 4**
+BFS + Greedy
+12 -> 12 -1  -> 11-1
+-> 12 - 4->  .....so on
+-> 12 - 9
+BFS will make sure to get the shortest poossible route
