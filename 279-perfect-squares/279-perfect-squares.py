@@ -12,21 +12,65 @@ class Solution:
 #             dp[i] = min(temp)
         
 #         return dp[n]
+#     def numSquares(self, n: int) -> int:
+#         sq_nums = set([i*i for i in range(int(n**0.5) + 1)])
+        
+        
+#         def is_divided(n,count):
+#             if count == 1:
+#                 return n in sq_nums
+            
+#             for k in sq_nums:
+#                 if is_divided(n - k, count - 1):
+#                     return True
+            
+#             return False
+        
+#         for i in range(1,n+1):
+#             if is_divided(n,i):
+#                 return i
     def numSquares(self, n: int) -> int:
-        sq_nums = set([i*i for i in range(int(n**0.5) + 1)])
+        sq_nums = [i*i for i in range(1,int(n**0.5) + 1)]
         
+        queue = set()
+        queue.add(n)
+        level = 0
         
-        def is_divided(n,count):
-            if count == 1:
-                return n in sq_nums
+        while queue:
+            level += 1
+            nxt = set()
+            for remain in queue:
+                for sq in sq_nums:
+                    if remain == sq:
+                        return level
+                    elif remain < sq:
+                        break
+                    else:
+                        nxt.add(remain - sq)
             
-            for k in sq_nums:
-                if is_divided(n - k, count - 1):
-                    return True
-            
-            return False
+            queue = nxt
         
-        for i in range(1,n+1):
-            if is_divided(n,i):
-                return i
+        return level
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
                 
