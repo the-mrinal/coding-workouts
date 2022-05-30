@@ -63,17 +63,23 @@ class Solution:
         
         uf = UnionFind(n)
         
-        result = 0
-        count = n - 1
-        while res and count > 0:
+        minCost = 0
+        
+        count = n -1
+        
+        while res and count >  0:
             edge = heapq.heappop(res)
-            if not uf.isConnected(edge.p1, edge.p2):
-                uf.union(edge.p1, edge.p2)
-                result += edge.cost
-                count -= 1
-        return result
+            p1 = edge.p1
+            p2 = edge.p2
+            cost = edge.cost
+            if not uf.union(p1,p2):
+                continue
+            
+            count -= 1
+            minCost += cost
 
         
+        return minCost
             
             
         
