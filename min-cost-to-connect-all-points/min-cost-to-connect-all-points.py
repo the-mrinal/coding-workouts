@@ -1,36 +1,3 @@
-class UnionFind:
-    def __init__(self,size):
-        self.root = [i for i in range(size)]
-        self.rank = [1 for _ in range(size)]
-    
-    def find(self,x):
-        if x == self.root[x]:
-            return x
-        self.root[x] = self.find(self.root[x])
-        return self.root[x]
-    
-    
-    
-    def union(self,a,b):
-        rootA = self.find(a)
-        rootB = self.find(b)
-        
-        if rootA == rootB:
-            return False
-        else:
-            if self.rank[rootA] > self.rank[rootB]:
-                self.root[rootB] = rootA
-            
-            elif self.rank[rootA] < self.rank[rootB]:
-                self.root[rootA] = rootB
-            else:
-                self.root[rootB] = rootA
-                self.rank[rootA] += 1
-            
-            return True
-    def isConnected(self,x,y):
-        return self.find(x) == self.find(y)
-
 class Edge:
     def __init__(self,a,b,cost):
         self.p1 = a
@@ -39,51 +6,59 @@ class Edge:
     
     def __lt__(self,other):
         return self.cost < other.cost
-            
+
+
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         
-        if not points or len(points) == 0:
-            return 0
-        
         def costF(a,b):
             xi,yi = points[a]
             xj,yj = points[b]
-            t = abs(xi - xj) + abs(yi - yj)
-            return t
+            return abs(xi - xj) + abs(yi - yj)
         
-        res = []
-        for i in range(n-1):
-            for j in range(1,n):
-                res.append(Edge(i,j,costF(i,j)))
+        pq = []
         
-        heapq.heapify(res)
+        for j in range(1,n):
+            pq.append(Edge(0,j,costF(0,j)))
         
+        heapq.heapify(pq)
         
-        uf = UnionFind(n)
+        visited = set([0])
         
         minCost = 0
-        
-        count = n -1
-        
-        while res and count >  0:
-            edge = heapq.heappop(res)
-            p1 = edge.p1
-            p2 = edge.p2
-            cost = edge.cost
-            if not uf.union(p1,p2):
-                continue
-            
-            count -= 1
-            minCost += cost
+    
+        count = n - 1
+        while count > 0  and pq:
+            edge = heapq.heappop(pq)
+            print('ffg')
+            if edge.p2 not in visited:            
+                minCost += edge.cost
+                visited.add(edge.p2)
 
+                for j in range(n):
+                    if j not in visited:
+                        heapq.heappush(pq,Edge(edge.p2,j,costF(edge.p2,j)))
+                count -= 1
         
         return minCost
-            
-            
         
         
+        
+            #     while count > 0  and pq:
+            # edge = heapq.heappop(pq)
+            # point1 = edge.p1
+            # point2 = edge.p2
+            # cost = edge.cost
+            # if point2 not in visited:
+            #     result += cost
+            #     visited.add(point2)
+            #     for j in range(n):
+            #         if j not in visited:
+            #             distance = abs(points[point2][0] - points[j][0]) + \
+            #                        abs(points[point2][1] - points[j][1])
+            #             heapq.heappush(pq, Edge(point2, j, distance))
+            #     count -= 1
         
         
         
