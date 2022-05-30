@@ -28,7 +28,7 @@ class UnionFind:
                 self.rank[rootA] += 1
             
             return True
-    def connected(self, x, y):
+    def isConnected(self,x,y):
         return self.find(x) == self.find(y)
 
 class Edge:
@@ -42,33 +42,40 @@ class Edge:
             
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
+        n = len(points)
+        
         if not points or len(points) == 0:
             return 0
-        size = len(points)
-        pq = []
-        uf = UnionFind(size)
-
-        for i in range(size):
-            x1, y1 = points[i]
-            for j in range(i + 1, size):
-                x2, y2 = points[j]
-                # Calculate the distance between two coordinates.
-                cost = abs(x1 - x2) + abs(y1 - y2)
-                edge = Edge(i, j, cost)
-                pq.append(edge)
         
-        # Convert pq into a heap.
-        heapq.heapify(pq)
-
+        def costF(a,b):
+            xi,yi = points[a]
+            xj,yj = points[b]
+            t = abs(xi - xj) + abs(yi - yj)
+            return t
+        
+        res = []
+        for i in range(n-1):
+            for j in range(1,n):
+                res.append(Edge(i,j,costF(i,j)))
+        
+        heapq.heapify(res)
+        
+        
+        uf = UnionFind(n)
+        
         result = 0
-        count = size - 1
-        while pq and count > 0:
-            edge = heapq.heappop(pq)
-            if not uf.connected(edge.p1, edge.p2):
+        count = n - 1
+        while res and count > 0:
+            edge = heapq.heappop(res)
+            if not uf.isConnected(edge.p1, edge.p2):
                 uf.union(edge.p1, edge.p2)
                 result += edge.cost
                 count -= 1
         return result
+
+        
+            
+            
         
         
         
