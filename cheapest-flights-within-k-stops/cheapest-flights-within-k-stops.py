@@ -3,13 +3,12 @@ class Solution:
         # we will have to make 2 queues - prev and curr
         print(src,dst,k)
         prev = [float('inf') for _ in range(n)]
-        curr = []
+        curr = [float('inf') for _ in range(n)]
         
         prev[src] = 0
         
         for i in range(1,k + 2):
             
-            curr = [float('inf') for _ in range(n)]
             curr[src] = 0
             
             for s,d,dist in flights:
