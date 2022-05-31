@@ -39,6 +39,7 @@ class Solution:
             
             for nxt in adjMap[curr]:
                 if nxt not in curr_min or (curr_min[nxt] > max(curr_min[curr], costFun(curr,nxt))):
+                    # since its asking for maximum of all the absolute diffrence 
                     curr_min[nxt] = max(curr_min[curr], costFun(curr,nxt))
                     if nxt not in visited:
                         visited.add(nxt)
