@@ -13,11 +13,11 @@ class Solution:
                     temp = x - i
                     ind += temp
             
-            
-            if float(out - float(out * float(loss/100))) >= float(ind):
-                return False
+            # this formual is given in hints i just copy pasted it. 
+            if float(out - (out * (loss/100))) >= float(ind):
+                return False # going right to maximise the output
             else:
-                return True
+                return True # going left when failing the case
             
         
         left = 0
@@ -26,7 +26,7 @@ class Solution:
         
         
         while right - left > elipsion:
-            mid = float(left + float((right - left) / 2))
+            mid = float(left + (right - left) / 2)
 
             if isFeasible(mid):
                 right = mid
