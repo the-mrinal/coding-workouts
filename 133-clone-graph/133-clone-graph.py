@@ -15,7 +15,7 @@ class Solution:
     def cloneGraph(self, node: 'Node') -> 'Node':
         
         if node is None:
-            return 
+            return None
         
         
         if node in self.visited:
