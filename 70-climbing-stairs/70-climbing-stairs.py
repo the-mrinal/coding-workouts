@@ -18,15 +18,17 @@ class Solution:
     def climbStairs(self,n:int) -> int:
         if n <= 2:
             return n
-        res = [0 for _ in range(n + 1)]
         
-        res[0] = 1
-        res[1] = 1
-        res[2] = 2
+        curr = 1
+        prev = 1
         
         for i in range(2,n+1,2):
-            res[i] = res[i - 1] + res[i - 2]
+            temp = curr
+            curr = curr + prev
+            prev = temp
             if i < n:
-                res[i + 1] = res[i] + res[i - 1]
+                temp = curr
+                curr = curr + prev
+                prev = temp
         
-        return res[n]
+        return curr
