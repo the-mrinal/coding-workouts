@@ -29,5 +29,4 @@ class Solution:
             if i < n:
                 res[i + 1] = res[i] + res[i - 1]
         
-        print(res)
         return res[n]
