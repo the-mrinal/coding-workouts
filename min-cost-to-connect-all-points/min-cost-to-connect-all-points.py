@@ -29,7 +29,7 @@ class Solution:
         minCost = 0
     
         count = n - 1
-        while count > 0  and pq:
+        while len(visited) < n  and pq:
             edge = heapq.heappop(pq)
             print('ffg')
             if edge.p2 not in visited:            
