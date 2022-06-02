@@ -29,26 +29,6 @@
 
 class Solution:
     def leadsToDestination(self, n: int, edges: List[List[int]], src: int, dest: int) -> bool:
-#         graph = defaultdict(set)
-#         for v1, v2 in edges:
-#             graph[v1].add(v2)
-
-#         stack = [(source,[source])] # stack for (vertex and path)
-
-#         while stack:
-#             node,path = stack.pop(-1)
-#             if node not in graph: 
-#                     if node != destination:  #ending point in a path
-#                         return False
-#                     else:
-#                         continue
-
-#             for next_node in graph[node]:
-#                 if next_node in path:
-#                     return False # circle detected
-#                 else:
-#                     stack.append((next_node,path+[next_node]))
-#         return True
 
             adjMap = defaultdict(set)
 
