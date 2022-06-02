@@ -1,24 +1,27 @@
 class Solution:
-    def myPow(self, x: float, n: int) -> float:
-        if n < 0:
-            x = 1/x
-            n = - n
-        
-        hashMap = {}
-        
-        def helper(t):
-            if t == 0:
-                return 1
-            if t == 1:
+    def myPow(self, base: float, val: int) -> float:
+        cache = {}
+        def power(x,n):
+            if n == 1:
                 return x
-            
-            if t in hashMap:
-                return hashMap[t]
-            
-            middle = t // 2
-            other = t - middle
-            
-            hashMap[t] = helper(middle) * helper(other)
-            return hashMap[t]
+            if n == 0:
+                return 1
+
+            if n in cache:
+                return cache[n]
+
+            mid = n // 2
+
+            otherMid = n - mid
+
+            res = float(power(x,mid) * power(x,otherMid))
+
+            cache[n] = res
+            return res
         
-        return helper(n)
+        
+        if val < 0:
+            val = - val
+            base = 1/base
+        
+        return power(base,val)
