@@ -1,29 +1,26 @@
 class Solution:
     def totalNQueens(self, n: int) -> int:
-      
-        def nqueenHelper(row,diag,anti,cols):
+        
+        def backtrack(row,cols,diagonals,antidiagonals):
             if row == n:
                 return 1
-
             soln = 0
             for col in range(n):
-                d = row - col
-                ad = row + col
-
-                if col in cols or d in diag or ad in anti:
+                diag = row - col
+                antidiag = row + col
+                
+                if col in cols or diag in diagonals or antidiag in antidiagonals:
                     continue
-
+                
                 cols.add(col)
-                diag.add(d)
-                anti.add(ad)
-
-                soln += nqueenHelper(row + 1,diag,anti,cols)
-
+                antidiagonals.add(antidiag)
+                diagonals.add(diag)
+                soln += backtrack(row + 1,cols,diagonals,antidiagonals)
+                
                 cols.remove(col)
-                diag.remove(d)
-                anti.remove(ad)
-            
+                antidiagonals.remove(antidiag)
+                diagonals.remove(diag)
+                print(soln)
             return soln
-
-        
-        return nqueenHelper(0,set(),set(),set())
+    
+        return backtrack(0,set(),set(),set())
