@@ -1,25 +1,20 @@
 class Solution:
-    def validPath(self, n: int, edges: List[List[int]], source: int, destination: int) -> bool:
-        neighbours = defaultdict(list)
-        
+    def validPath(self, n: int, edges: List[List[int]], src: int, dest: int) -> bool:
+        adjMap = defaultdict(list)
+	
         for a,b in edges:
-            neighbours[a].append(b)
-            neighbours[b].append(a)
+            adjMap[a].append(b)
+            adjMap[b].append(a)
+
+        que = deque([src])
         
-        seen = set([source])
-        
-        que = deque([source])
-        
+        visited = set()
         while que:
             curr = que.popleft()
-            
-            if curr == destination:
+            if curr == dest:
                 return True
-            
-            
-            for n in neighbours[curr]:
-                if n not in seen:
-                    que.append(n)
-                    seen.add(n)
-                
+            for neigh in adjMap[curr]:
+                if neigh not in visited:
+                    que.append(neigh)
+                    visited.add(neigh)
         return False
