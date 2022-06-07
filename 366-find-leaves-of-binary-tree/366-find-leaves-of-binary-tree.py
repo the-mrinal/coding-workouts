@@ -34,6 +34,7 @@
 #         return ans
 class Solution:
     def findLeaves(self, root: Optional[TreeNode]) -> List[List[int]]:
+#         time = O(N) 
         ans = defaultdict(list)
         def dfs(node,layer):
             if not node:
