@@ -1,18 +1,16 @@
 class Solution:
     def maxProfit(self, k: int, prices: List[int]) -> int:
         n = len(prices)
+        dp = [[[0]*2 for _ in range(k+1)] for _ in range(n+1)]
 
-        @lru_cache(None)
-        def dp(i,transactionLeft,isHolding):
-            if i == n or transactionLeft == 0:
-                return 0
-
-            money = 0
-            if isHolding:
-                money = max(dp(i+1,transactionLeft,isHolding),prices[i] + dp(i+1,transactionLeft - 1,False))
-            else:
-                money = max(dp(i+1,transactionLeft,isHolding),-prices[i] + dp(i+1,transactionLeft,True))
-
-            return money
-
-        return dp(0,k,False)
+        for i in range(n-1,-1,-1):
+            for j in range(1,k+1):
+                for isHolding in range(2):
+                    doNothing = dp[i+1][j][isHolding]
+                    if isHolding == 0:
+                        doSomething = -prices[i] + dp[i+1][j][1]
+                    else:
+                        doSomething = prices[i] + dp[i+1][j - 1][0]
+                    dp[i][j][isHolding] = max(doNothing,doSomething)
+        
+        return dp[0][k][0]
