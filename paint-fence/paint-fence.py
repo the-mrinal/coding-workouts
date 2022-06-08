@@ -1,15 +1,17 @@
 class Solution:
     def numWays(self, n: int, k: int) -> int:
+        if n == 1:
+            return k
+        dp = [0 for _ in range(n+1)]
         
-        @lru_cache(None)
-        def dp(i):
-            if i == 1:
-                 return k
-            if i == 2:
-                 return k * k
-
-            temp =  (k-1) * (dp(i-1) + dp(i-2))
-            
-            return temp
-	
-        return dp(n)
+        dp[1] = k
+        
+        
+        dp[2]= k * k
+        
+        same ,diff = k,k*(k-1)
+        
+        for i in range(3,n+1):
+            same,diff = diff,(k-1)*(same + diff)
+            dp[i] = same + diff
+        return dp[n]
