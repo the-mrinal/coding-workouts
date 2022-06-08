@@ -10,7 +10,7 @@ class Solution:
                 return 0
             
             res = dp(i+1)
-            if i+1 < n and (int(s[i]) == 1 or int(s[i]) <= 2 and int(s[i + 1]) < 7) :
+            if i+1 < n and (int(s[i]) == 1 or int(s[i]) == 2 and int(s[i + 1]) < 7) :
                 print(s[i],int(s[i]) <= 2)
                 res += dp(i + 2)
             return res
