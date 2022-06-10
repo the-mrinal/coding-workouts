@@ -4,7 +4,7 @@ class Solution:
         k = len(costs[0])
         
         if n == 0: return 0
-        
+        # markov chain
         for i in range(1,n):
             min1 = min(costs[i - 1])
             
