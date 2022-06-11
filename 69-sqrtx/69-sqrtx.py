@@ -11,7 +11,7 @@ class Solution:
             return False
         
         left = 2
-        right = x 
+        right = x // 2 + 1
         
         while left < right:
             mid = left + (right - left) // 2
