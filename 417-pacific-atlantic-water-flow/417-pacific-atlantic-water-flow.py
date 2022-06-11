@@ -1,41 +1,47 @@
-class Solution(object):
-    def pacificAtlantic(self, matrix):
-        """
-        :type matrix: List[List[int]]
-        :rtype: List[List[int]]
-        """
-        if not matrix: return []
-        self.directions = [(1,0),(-1,0),(0,1),(0,-1)]
-        m = len(matrix)
-        n = len(matrix[0])
-        p_visited = [[False for _ in range(n)] for _ in range(m)]
-        
-        a_visited = [[False for _ in range(n)] for _ in range(m)]
-        result = []
-        
-        for i in range(m):
-            # p_visited[i][0] = True
-            # a_visited[i][n-1] = True
-            self.dfs(matrix, i, 0, p_visited, m, n)
-            self.dfs(matrix, i, n-1, a_visited, m, n)
-        for j in range(n):
-            # p_visited[0][j] = True
-            # a_visited[m-1][j] = True
-            self.dfs(matrix, 0, j, p_visited, m, n)
-            self.dfs(matrix, m-1, j, a_visited, m, n)
+class Solution:
+    def pacificAtlantic(self, heights: List[List[int]]) -> List[List[int]]:
+	
+        m = len(heights)
+        n = len(heights[0])
+
+        pacific_side = deque()
+        atlantic_side = deque()
+
+        for i in range(m): # all the rows
+            pacific_side.append((i,0))
+            atlantic_side.append((i,n-1))
+
+        for j in range(n): # all the cols
+            pacific_side.append((0,j))
+            atlantic_side.append((m-1,j))
             
-        for i in range(m):
-            for j in range(n):
-                if p_visited[i][j] and a_visited[i][j]:
-                    result.append([i,j])
-        return result
-                
-                
-    def dfs(self, matrix, i, j, visited, m, n):
-        # when dfs called, meaning its caller already verified this point 
-        visited[i][j] = True
-        for dir in self.directions:
-            x, y = i + dir[0], j + dir[1]
-            if x < 0 or x >= m or y < 0 or y >= n or visited[x][y] or matrix[x][y] < matrix[i][j]:
-                continue
-            self.dfs(matrix, x, y, visited, m, n)
+            
+            
+        
+
+
+        def dfs(curr_que):
+            que = curr_que
+            eligible_set = set()
+
+            while que:
+                x,y = que.popleft()
+                eligible_set.add((x,y))
+                for dx,dy in [[0,1],[1,0],[-1,0],[0,-1]]:
+                    nx = dx+x
+                    ny = dy + y
+                    if nx < 0 or nx >= m or ny < 0 or ny >= n or (nx,ny) in eligible_set:
+                        continue
+                    if heights[nx][ny] < heights[x][y]:
+                        continue
+                        
+                    que.append([nx,ny])
+
+            return eligible_set
+
+
+
+        pacific_set = dfs(pacific_side)
+        atlantic_set = dfs(atlantic_side)                                
+
+        return list(pacific_set.intersection(atlantic_set))
