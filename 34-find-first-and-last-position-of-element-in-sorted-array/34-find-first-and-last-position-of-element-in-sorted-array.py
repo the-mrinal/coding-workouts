@@ -1,53 +1,46 @@
 class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
-        if len(nums) == 0:
+    
+        n = len(nums)
+        if n == 0:
+            return [-1,-1]
+        def isFeasible(mid):
+            if nums[mid] >= target:
+                return True
+            return False
+        
+        def isFeasibleRight(mid):
+            if nums[mid] > target:
+                return True
+            return False
+        
+        
+        def bSearch(si,ei):
+            while si < ei:
+                mid = si + (ei - si)//2         
+                if isFeasible(mid):
+                    ei = mid
+                else:
+                    si = mid + 1
+            return si
+        
+        def bSearchRight(si,ei):
+            while si < ei:
+                mid = si + (ei - si)//2         
+                if isFeasibleRight(mid):
+                    ei = mid
+                else:
+                    si = mid + 1
+            return si - 1
+        
+        
+        
+        left = bSearch(0,n-1)
+        if nums[left] != target:
             return [-1,-1]
         
-        def feasibleFindStart(mid):
-            if nums[mid] <= target:
-                if nums[mid] == target:
-                    if mid != 0 and nums[mid - 1] == nums[mid]:
-                        return True
-                    return False
-                return False
-            return True
-        
-        def feasibleFindEnd(mid):
-            if nums[mid] <= target:
-                if nums[mid] == target:
-                    if mid != len(nums)-1 and nums[mid + 1] == nums[mid]:
-                        return False
-                    return True
-                return False
-            return True
-        
-        left = 0
-        
-        right = len(nums)
-        
-        while left < right:
-            mid = left + (right - left) // 2
-            
-            if feasibleFindStart(mid):
-                right = mid
-            else:
-                left = mid + 1
-        
-        print(left -1 )
-        if nums[left - 1] == target:
-            si = left - 1
-            left = si
-            right = len(nums)
-            
-            while left < right:
-                mid = left + (right - left)//2
-                if feasibleFindEnd(mid):
-                    right = mid
-                else:
-                    left = mid + 1
-            ei = left
-            print(ei)
-            return [si,ei]
-        return [-1,-1]
-        
+        right = left
+        while right < n and nums[right] == target:
+            right += 1
+        return [left,right - 1]
         
