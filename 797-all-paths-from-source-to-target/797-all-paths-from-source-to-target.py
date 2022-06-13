@@ -1,20 +1,22 @@
 class Solution:
     def allPathsSourceTarget(self, graph: List[List[int]]) -> List[List[int]]:
-        st = deque([[0]])
-        
+        stack = []
+        n = len(graph)
         res = []
-        # seen = set([0])
-        
-        while st:
-            curr = st.popleft()
+        def dfs():
+            stack.append([0,[0]])
             
-            index = curr[-1]
-            
-            if index == len(graph) -1:
-                res.append(curr.copy())
-                continue
-            
-            for n in graph[index]:
-                st.append(curr + [n])
-        
+            visited = set()
+            visited.add(0)
+            while stack:
+                curr,path = stack.pop()
+                
+                if curr == n - 1:
+                    res.append(path.copy())
+                    continue
+                for neigh in graph[curr]:
+                    if neigh is not visited:
+                        stack.append([neigh,path+[neigh]])
+                        visited.add(neigh)
+        dfs()
         return res
