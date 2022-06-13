@@ -1,21 +1,18 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         n = len(s)
-        if n == 0 or n==1:
-            return n
-        
-        window_start  = window_end = 0
-        res = -1
-        char = [None] * 256
-        while window_end < n:
-            index = ord(s[window_end])
-            
-            if char[index] != None and char[index] >= window_start:
-                window_start = char[index] + 1
-            
-            res = max(res,window_end - window_start + 1)
-            
-            char[index] = window_end
-            window_end += 1
-            
-        return res
+        count = 0
+        window_start = 0
+        window_set = {}
+        for window_end in range(n):
+            if s[window_end] in window_set:
+                prev = window_start
+                window_start = window_set[s[window_end]] + 1
+                while prev < window_start:
+                    del window_set[s[prev]]
+                    prev += 1
+                window_set[s[window_end]] = window_end
+            else:
+                window_set[s[window_end]] = window_end
+            count = max(count,window_end - window_start + 1)
+        return count
