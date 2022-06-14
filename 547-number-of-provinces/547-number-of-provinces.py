@@ -38,7 +38,12 @@ class Solution:
                 if i!= j and  isConnected[i][j] == 1:
                     uf.union(i,j)
         
-        return uf.count
+        count = 0
+        for i in range(m):
+            rootX = uf.find(i)
+            if rootX ==i:
+                count += 1
+        return count
         
         
         
