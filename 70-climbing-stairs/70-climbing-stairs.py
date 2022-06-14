@@ -1,31 +1,30 @@
 class Solution:
-    
-#     def climbStairs(self, n: int) -> int:
-#         if n == 1 or n == 2:
-#             return n
+    def climbStairs(self, n: int) -> int:
         
-#         if n in self.cache:
-#             return self.cache[n]
+#         def recursion(m):
+#             if m == 0:
+#                 return 1
+#             if m == 1:
+#                 return 1
+#             if m == 2:
+#                 return 2
+            
+#             return recursion(m-1)+recursion(m-2)
         
-#         sums = self.climbStairs(n - 1) + self.climbStairs(n - 2)
+        if n <= 1:
+            return 1
+        if n == 2:
+            return 2
         
-#         self.cache[n] = sums
-#         return sums
-        
-    def climbStairs(self,n:int) -> int:
-        if n <= 2:
-            return n
-        
-        curr = 1
+        count = 0
+        curr = 2
         prev = 1
-        
-        for i in range(2,n+1,2):
-            temp = curr
-            curr = curr + prev
-            prev = temp
-            if i < n:
-                temp = curr
-                curr = curr + prev
-                prev = temp
+        for i in range(3,n + 1):
+            count =(curr + prev)
+            prev = curr
+            curr = count
         
         return curr
+        
+        
+        # return recursion(n)
