@@ -1,36 +1,22 @@
 class Solution:
     def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
-        #create adj map
         adjMap = defaultdict(list)
-        
-        for src,dest,time in times:
-            adjMap[src].append((dest,time))
-            
-        
-        que = [(0,k)]
-        visited = set()
-        max_cost = 0
+        for s,d,w in times:
+            adjMap[s].append([w,d])
 
-        
-        while que:
-            
-            cost,node = heapq.heappop(que)
-            
-            if node in visited:
-                continue
-            
-            visited.add(node)
-            
-            max_cost = max(max_cost,cost)
-            
-            neighbours = adjMap[node]
-        
-        
-            for ne in neighbours:
-                n_node,n_cost = ne
-                
-                if n_node not in visited:
-                    new_cost = cost + n_cost
-                    heapq.heappush(que,(new_cost,n_node))
-        
-        return max_cost if len(visited) == n else -1
+        dest = [float('inf') for i in range(n)]
+
+        dest[k - 1] = 0 # due 0th indexed arr
+
+        pq = [(0,k)]
+
+        heapq.heapify(pq)
+
+        while pq:
+            w,curr = heapq.heappop(pq)
+            for d_w,d in adjMap[curr]:
+                if dest[d-1] > dest[curr - 1] + d_w:
+                    dest[d - 1] = dest[curr - 1] + d_w
+                    heapq.heappush(pq,(dest[d - 1],d))
+
+        return max(dest) if max(dest) < float('inf') else -1
