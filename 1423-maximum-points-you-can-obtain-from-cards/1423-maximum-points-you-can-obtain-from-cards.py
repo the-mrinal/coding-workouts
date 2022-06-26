@@ -7,7 +7,7 @@ class Solution:
         for j in range(k):
             searcharr.append(cardPoints[n-j-1])
         
-        
+        print(searcharr)
         window_start = 0
         window_sum = 0
         max_sum = 0
