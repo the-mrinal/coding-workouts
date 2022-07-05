@@ -20,21 +20,4 @@ class Solution:
             if (i + nums[i]) >= lastIndex:
                 lastIndex = i
             
-        return lastIndex == 0
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        return lastIndex == 0        
