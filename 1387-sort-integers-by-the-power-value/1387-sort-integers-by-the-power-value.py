@@ -23,6 +23,4 @@ class Solution:
         for i in range(k):
             ans = heapq.heappop(lst)
 
-        return ans[1]    
-
-        
+        return ans[1]  
