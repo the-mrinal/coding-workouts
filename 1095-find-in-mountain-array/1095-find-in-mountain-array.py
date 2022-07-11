@@ -31,25 +31,23 @@ class Solution:
         
         return si
     
-    def binary_search(self,arr,start,end, key):
+    def binary_search(self,nums,si,ei,key):
         
-        isAscending = arr.get(start) < arr.get(end)
-        while start <= end:
-            # calculate the middle of the current range
-            mid = start + (end - start) // 2
-            midElem = arr.get(mid)
-            if key == midElem:
-                return mid
+        isAsc = nums.get(si) <= nums.get(ei)
+        while si <= ei:
+            mid = si + (ei - si)//2
+            midElem = nums.get(mid)
+            if midElem == key:
+                return mid		
 
-            if isAscending:  # ascending order
-                if key < midElem:
-                    end = mid - 1  # the 'key' can be in the first half
-                else:  # key > arr[mid]
-                    start = mid + 1  # the 'key' can be in the second half
-            else:  # descending order
-                if key > midElem:
-                    end = mid - 1  # the 'key' can be in the first half
-                else:  # key < arr[mid]
-                    start = mid + 1  # the 'key' can be in the second half
-
+            if isAsc:
+                if midElem < key:
+                    si = mid + 1
+                else:
+                    ei = mid - 1
+            else:
+                if midElem < key:
+                    ei = mid - 1
+                else:
+                    si = mid + 1
         return float('inf')
