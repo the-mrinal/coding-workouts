@@ -1,46 +1,37 @@
 class Solution:
-    def searchRange(self, nums: List[int], target: int) -> List[int]:
-    
+    def searchRange(self, nums: List[int], key: int) -> List[int]:
         n = len(nums)
-        if n == 0:
-            return [-1,-1]
-        def isFeasible(mid):
-            if nums[mid] >= target:
-                return True
-            return False
-        
-        def isFeasibleRight(mid):
-            if nums[mid] > target:
-                return True
-            return False
-        
-        
-        def bSearch(si,ei):
-            while si < ei:
-                mid = si + (ei - si)//2         
-                if isFeasible(mid):
-                    ei = mid
+        def find_starting():
+            si = 0
+            ei = n - 1
+
+            while si <= ei:
+                mid = si + (ei - si)//2
+
+                if nums[mid] == key and (mid == 0  or nums[mid] != nums[mid - 1]):
+                    return mid
+                if nums[mid] >= key:
+                    ei = mid - 1
                 else:
                     si = mid + 1
-            return si
-        
-        def bSearchRight(si,ei):
-            while si < ei:
-                mid = si + (ei - si)//2         
-                if isFeasibleRight(mid):
-                    ei = mid
-                else:
+
+            return -1
+
+        def find_ending():
+            si = 0
+            ei = n - 1
+            while si <= ei:
+                mid = si + (ei - si)//2
+
+                if nums[mid] == key and (mid == n - 1 or nums[mid] != nums[mid + 1]):
+                    return mid
+                if nums[mid] <= key:
                     si = mid + 1
-            return si - 1
-        
-        
-        
-        left = bSearch(0,n-1)
-        if nums[left] != target:
-            return [-1,-1]
-        
-        right = left
-        while right < n and nums[right] == target:
-            right += 1
-        return [left,right - 1]
-        
+                else:
+                    ei = mid - 1
+            return -1
+
+
+        index1 = find_starting()
+        index2 = find_ending()
+        return [index1,index2]
