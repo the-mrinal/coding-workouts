@@ -4,9 +4,6 @@ class Solution:
         left = 0
         right = len(nums)
 
-#         if nums[right - 1] < target:
-#             return right
-
         def condition(mid):
             if nums[mid] >= target:
                 return True
