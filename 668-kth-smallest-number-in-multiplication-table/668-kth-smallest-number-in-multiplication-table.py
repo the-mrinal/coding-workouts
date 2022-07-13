@@ -2,24 +2,22 @@ class Solution:
     def findKthNumber(self, m: int, n: int, k: int) -> int:
         left = 1
         right = m * n
-        if k > right:
-            return -1
-
-        def condition(num):
-            # atleast K val <= target ,min target
+        
+        def condition(val): # target will be to find count of dgits present that are smaller than given number.
             count = 0
-            for val in range(1, m + 1):  # count row by row
-                add = min(num // val, n)
-                if add == 0:  # early exit
-                    break
+            for num in range(1,m + 1): # traverse rows
+                add = min(val // num, n)
                 count += add
-            return count >= k   
-
+                if add == 0:
+                    break
+            return count >= k
+        
         while left < right:
             mid = left + (right - left) // 2
+            
             if condition(mid):
                 right = mid
             else:
                 left = mid + 1
-
+        
         return left
