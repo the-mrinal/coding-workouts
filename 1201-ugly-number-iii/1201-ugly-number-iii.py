@@ -1,6 +1,6 @@
 class Solution:
     def nthUglyNumber(self, n: int, a: int, b: int, c: int) -> int:
-        MOD = 10**9 + 7
+        MOD = 10**10 + 7
         left = min(a,b,c)
         right = 10**10
         
