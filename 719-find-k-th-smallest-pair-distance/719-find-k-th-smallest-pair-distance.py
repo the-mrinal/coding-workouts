@@ -1,26 +1,27 @@
 class Solution:
     def smallestDistancePair(self, nums: List[int], k: int) -> int:
-        n = len(nums)
-        def isFeasible(guess):
-            count = left = 0
-            for right, x in enumerate(nums):
-                while x - nums[left] > guess:
-                    left += 1
-                count += right - left
-            return count >= k
-        
-        nums.sort()
-        
         left = 0
-        right = abs(nums[0] - nums[-1])
-        
+        right = max(nums) - min(nums)
+        n = len(nums)
+        nums.sort()
+        # 1 3 7 8  10 18 23 24 78
+        def condition(distance):
+            count, i, j = 0, 0, 0
+            while i < n or j < n:
+                while j < n and nums[j] - nums[i] <= distance:  # move fast pointer
+                    j += 1
+                count += j - i - 1  # count pairs
+                i += 1  # move slow pointer
+            return count >= k
+
         while left < right:
             mid = left + (right - left) // 2
             
-            if isFeasible(mid):
+            if condition(mid):
                 right = mid
             else:
                 left = mid + 1
         
-
         return left
+            
+                    
