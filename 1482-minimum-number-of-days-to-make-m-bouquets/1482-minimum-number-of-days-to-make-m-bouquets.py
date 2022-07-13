@@ -5,17 +5,18 @@ class Solution:
         if  len(bloomDay) < m*k:
             return -1
         def condition(day):
-            bouq,flower = 0,0
-            for bDay in bloomDay:
-                if bDay > day:
-                    flower = 0
+            bouq,flow = 0,0
+            for bloom in bloomDay:
+                if bloom > day:
+                    flow = 0
                 else:
-                    bouq += (flower + 1) // k
-                    flower = (flower + 1) % k
+                    bouq += (flow + 1)//k
+                    flow = (flow + 1) % k
+            
             return bouq >= m
         
         while left < right:
-            mid = left + (right - left) // 2
+            mid = left +(right - left) // 2
             
             if condition(mid):
                 right = mid
@@ -23,3 +24,4 @@ class Solution:
                 left = mid + 1
         
         return left
+                
