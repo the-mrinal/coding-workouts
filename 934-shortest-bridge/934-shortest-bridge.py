@@ -1,37 +1,41 @@
 class Solution:
     def shortestBridge(self, grid: List[List[int]]) -> int:
         n = len(grid)
-        islandA = []
-        bound = []
-        directions = [[1,0],[0,1],[-1,0],[0,-1]]
-        
-        #find rooot is islandA 
+        directions = [(0,1),(1,0),(-1,0),(0,-1)]
         def findRoot():
             for i in range(n):
                 for j in range(n):
                     if grid[i][j] == 1:
                         return (i,j)
+            
             return (-1,-1)
         
-        def dfs():
-            root = findRoot()
-            stack = [root]
-            
-            while stack:
-                a,b = stack.pop()
-                
-                grid[a][b] = -1
-                islandA.append((a,b))
-                for n_x,n_y in directions:
-                    x = n_x + a
-                    y = n_y + b
-                    if x < 0 or x >= n or y < 0 or y >= n or grid[x][y] < 0:
-                        continue
-                    if grid[x][y] == 0:
-                        bound.append((x,y))
-                    else:
-                        stack.append((x,y))
-        
+        def isNotValid(x,y):
+            if x < 0 or x >= n or y < 0 or y >= n or grid[x][y] == -1:
+                return True
+            return False
+
+        root = findRoot()
+        stack = [root]
+        bound = []
+
+        while stack:
+            curr = stack.pop()
+
+            grid[curr[0]][curr[1]] = -1
+
+            for neigh in directions:
+                new_x = neigh[0] + curr[0]
+                new_y = neigh[1] + curr[1]
+
+                if isNotValid(new_x,new_y):
+                    continue
+
+                if grid[new_x][new_y] == 0:
+                    bound.append([new_x,new_y])
+                else:
+                    stack.append((new_x,new_y))
+
         def findMinRoute():
             nonlocal bound
             step = 1
@@ -47,19 +51,10 @@ class Solution:
                                 new.append((x, y))
                 step += 1
                 bound = new
-        
-        dfs()
+
+
         return findMinRoute()
-        
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-            
-            
-            
-            
-            
+
+
+
+
