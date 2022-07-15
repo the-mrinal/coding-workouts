@@ -1,23 +1,21 @@
 class Solution:
-    def longestPalindrome(self, s: str) -> str:		
+    def longestPalindrome(self, s: str) -> str:
+        # babad
+        st = 0
+        maxLen = 0
         n = len(s)
-        st= 0
-        max_len = 0
-        def expandCenter(si,ei):
-            nonlocal max_len,st
-            while si > -1 and ei <  n and s[si] == s[ei]:
-                si -= 1
-                ei += 1
-            if max_len < ei - si -1:
-                max_len = ei - si - 1
-                st = si + 1
+        def findMax(start,end):
+            nonlocal maxLen,st,n
+            while start > -1 and end < n and s[start] == s[end]:
+                start -= 1
+                end += 1
+            if maxLen < end - start - 1:
+                maxLen = end- start - 1
+                st = start + 1
     
         
-        for start in range(n):
-            expandCenter(start,start)
-            expandCenter(start,start+1)
-        
-        
-        
-        # print()
-        return s[st:st + max_len]
+        for i in range(n):
+            findMax(i,i)
+            findMax(i,i+1)
+
+        return s[st:st+maxLen]
