@@ -1,23 +1,21 @@
 class Solution:
     def minOperations(self, nums: List[int], x: int) -> int:
+        # longest sub arr that sums up to total - x
+        # that will result in min subarr that will give us x
         
-        hashMap = {}
+        target = sum(nums) - x
+        maxLen = -1
+        currSum = 0
+        start = 0
         n = len(nums)
-        if n == 1:
-            return 1 if nums[0] == x else -1
-        
-        sums = 0
-        for i in range(n):
-            hashMap[sums] = i
-            sums += nums[i]
-        sums = 0
-        res = float('inf')
-        for j in range(n-1,-1,-1):
-            target = x - sums
-            if target in hashMap and hashMap[target] <= j + 1:
-                res = min(res,n-1-j+hashMap[target])
+        for end in range(n):
+            currSum += nums[end]
             
-            sums += nums[j]
+            while currSum > target and start <= end:
+                currSum -= nums[start]
+                start += 1
+            
+            if currSum == target:
+                maxLen = max(maxLen,end - start + 1)
         
-        return res if res < float('inf') else -1
-                
+        return n - maxLen if maxLen != -1 else -1
