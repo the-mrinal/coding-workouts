@@ -6,9 +6,8 @@ class Solution:
         while abs_x:
             digit = abs_x % 10
             abs_x = abs_x // 10
-            curr = (rev_x * 10 + digit)
-            if curr > LIMIT:
+            if rev_x > LIMIT / 10 or (rev_x == LIMIT/10 and digit > 7) :
                 return 0
-            else:
-                rev_x = curr
+            curr = (rev_x * 10 + digit)
+            rev_x = curr
         return rev_x if x > 0 else -rev_x
