@@ -1,21 +1,27 @@
 class Solution:
     def longestPalindrome(self, s: str) -> str:
-        # babad
-        st = 0
-        maxLen = 0
         n = len(s)
-        def findMax(start,end):
-            nonlocal maxLen,st,n
-            while start > -1 and end < n and s[start] == s[end]:
-                start -= 1
-                end += 1
-            if maxLen < end - start - 1:
-                maxLen = end- start - 1
-                st = start + 1
-    
+        maxSize = 0
+        maxVal = ""
+        def findP(left,right):
+            nonlocal maxSize,maxVal
+            currSize = 0
+            while left >= 0 and right < n:
+                if left != right and s[left] == s[right]:
+                    currSize += 2
+                elif s[left] == s[right]:
+                    currSize += 1
+                else:
+                    break
+                left -= 1
+                right += 1
+            if currSize > maxSize:
+                maxSize = currSize
+                # print(left,,right)
+                maxVal = s[left + 1:right]
         
         for i in range(n):
-            findMax(i,i)
-            findMax(i,i+1)
-
-        return s[st:st+maxLen]
+            findP(i,i)
+            findP(i,i+1)
+        
+        return maxVal
