@@ -1,7 +1,7 @@
 class Solution:
     def checkValidString(self, s: str) -> bool:
         n = len(s)
-        def validate(s,index,CURR):
+        def validate(s,CURR):
             bal ,wild =0,0
             for i in range(n):
                 if s[i] != "*":
@@ -11,4 +11,4 @@ class Solution:
                 if wild + bal < 0:
                     return False
             return wild >= bal
-        return validate(s,0,'(') and validate(s[::-1],0,')')
+        return validate(s,'(') and validate(s[::-1],')')
