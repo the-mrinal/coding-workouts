@@ -1,29 +1,36 @@
 class Solution:
     def numDecodings(self, s: str) -> int:
-        n = len(s)
-        
-        @lru_cache(None)
-        def dp(i):
-            if i == n:
-                return 1
-            if s[i] == '0':
+        '''
+        dp(index):
+            if index >= n:
                 return 0
+            if s[index] == 0:
+                return 0
+            if index == n - 1:
+                return 1
             
-            res = dp(i+1)
-            if i+1 < n and (int(s[i]) == 1 or int(s[i]) == 2 and int(s[i + 1]) < 7) :
-                print(s[i],int(s[i]) <= 2)
-                res += dp(i + 2)
-            return res
-        return dp(0)
-#     def numDecodings(self, s: str) -> int:
-#         @lru_cache(None)
-#         def dp(i):
-#             if i == len(s): return 1
-#             ans = 0
-#             if s[i] != '0':  # Single digit
-#                 ans += dp(i + 1)
-#             if i + 1 < len(s) and (s[i] == '1' or s[i] == '2' and s[i + 1] <= '6'):  # Two digits
-#                 ans += dp(i + 2)
-#             return ans
+            countA = dp(index + 1)
+            countB = 0
+            if int(s[index: index + 2]) < 27:
+                countB = dp(index + 2)
+            
+            return countA + countB
+        
+        '''
+        n = len(s)
+        @lru_cache(None)
+        def dp(index):
+            if index == n:
+                return 1
+            if s[index] == "0":
+                return 0
+            if index == n - 1:
+                return 1
 
-#         return dp(0)
+            countA = dp(index + 1)
+            if int(s[index: index + 2]) < 27:
+                countA +=  dp(index + 2)
+
+            return countA
+        
+        return dp(0)
