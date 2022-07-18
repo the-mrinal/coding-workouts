@@ -1,26 +1,20 @@
 class Solution:
     def canPartition(self, nums: List[int]) -> bool:
-
-        s = sum(nums)
-        if s % 2 != 0:
+        sums = sum(nums)
+        if sums % 2 != 0:
             return False
-
-        s = s//2 
-        return self.KnapSack(nums,s)
-
-    def KnapSack(self,nums,C):
-        dp = [[False for i in range(C+1)] for i in range(2)]
-
-        for i in range(C+1):
-            if i <= nums[0]:
-                dp[0][i] = nums[0] == i
-
-        for i in range(1,len(nums)):
-            for j in range(1,C+1):
-                profitA,profitB = 0,0
+        return self.KSumSubSeq(nums,sums // 2)
+    
+    def KSumSubSeq(self,nums,K):
+        n = len(nums)
+        dp = [[0 for _ in range(K + 1)] for _ in range(n)]
+        
+        for i in range(K + 1):
+            dp[0][i] = True if i == nums[0] else False
+        for i in range(1,n):
+            for j in range(K+1):
                 if nums[i] <= j:
-                    profitA = dp[(i-1)%2][j - nums[i]]
-                profitB = dp[(i-1)%2][j]
-                dp[i%2][j] = profitA or profitB
-
-        return dp[(len(nums)-1)%2][C]
+                    dp[i][j] = dp[i - 1][j - nums[i]]
+                dp[i][j] = dp[i][j] or dp[i - 1][j]
+        
+        return dp[n - 1][K]
