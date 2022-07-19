@@ -7,18 +7,18 @@ class Solution:
     def reverseBetween(self, head: Optional[ListNode], m: int, n: int) -> Optional[ListNode]:
         
         curr,prev = head,None
-        while m > 1:
-                prev = curr
-                curr = curr.next
-                m,n = m-1,n-1
-            
+        while curr and m > 1:
+            prev = curr
+            curr = curr.next
+            m-= 1
+            n -= 1
         tail,con = curr,prev
         
         while n:
-            nxt = curr.next
+            temp = curr.next
             curr.next = prev
             prev = curr
-            curr = nxt
+            curr = temp
             n -= 1
         
         if con:
@@ -27,3 +27,9 @@ class Solution:
             head = prev
         tail.next = curr
         return head
+        
+        
+        
+        
+        
+        
