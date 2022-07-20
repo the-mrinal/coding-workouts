@@ -1,18 +1,20 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
+        start = 0
+        distinctChar = {}
         n = len(s)
-        count = 0
-        window_start = 0
-        window_set = {}
-        for window_end in range(n):
-            if s[window_end] in window_set:
-                prev = window_start
-                window_start = window_set[s[window_end]] + 1
-                while prev < window_start:
-                    del window_set[s[prev]]
+        maxLen = 0
+        for end in range(n):
+            if s[end] in distinctChar:
+                prev = start
+                start = distinctChar[s[end]] + 1
+                while prev < start:
+                    del distinctChar[s[prev]]
                     prev += 1
-                window_set[s[window_end]] = window_end
+                distinctChar[s[end]] = end
             else:
-                window_set[s[window_end]] = window_end
-            count = max(count,window_end - window_start + 1)
-        return count
+                distinctChar[s[end]] = end
+            
+            maxLen = max(maxLen,end - start + 1)
+        
+        return maxLen
