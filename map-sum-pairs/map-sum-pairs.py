@@ -12,13 +12,13 @@ class MapSum:
 
     
     def insert(self, key: str, val: int) -> None:
-        diff = val - self.map[key]
         curr = self.root
+        diff = val - self.map[key]
         for c in key:
             curr = curr.children[c]
             curr.sum += diff
+            print(curr.sum,c)
         self.map[key] = val
-        
 
     def sum(self, prefix: str) -> int:
         curr = self.root
