@@ -1,32 +1,34 @@
 class TrieNode:
     def __init__(self):
-        self.child = defaultdict(TrieNode)
+        self.children = defaultdict(TrieNode)
         self.sum = 0
+
 
 class MapSum:
 
     def __init__(self):
-        self.trieRoot = TrieNode()
+        self.root = TrieNode()
         self.map = defaultdict(int)
 
+    
     def insert(self, key: str, val: int) -> None:
         diff = val - self.map[key]
-        curr = self.trieRoot
+        curr = self.root
         for c in key:
-            curr = curr.child[c]
+            curr = curr.children[c]
             curr.sum += diff
         self.map[key] = val
         
 
     def sum(self, prefix: str) -> int:
-        curr = self.trieRoot
-        for c in prefix:
-            if c not in curr.child: return 0
-            curr = curr.child[c]
+        curr = self.root
         
+        for c in prefix:
+            if c not in curr.children: return 0
+            curr = curr.children[c]
+    
         return curr.sum
         
-
 
 # Your MapSum object will be instantiated and called as such:
 # obj = MapSum()
