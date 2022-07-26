@@ -7,7 +7,7 @@ class Solution:
         for end in range(n):
             currSum +=  nums[end]
             
-            while currSum *(end - start + 1) >= k and start <= end:
+            while currSum *(end - start + 1) >= k and start < end:
                 currSum -= nums[start]
                 start += 1
             
