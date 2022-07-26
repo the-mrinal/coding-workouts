@@ -7,4 +7,7 @@ class Solution:
         
         return -1 if i < len(nums) and i == nums[i] else i
         
+#         4 4 3 0 0
+#         0 1 2 3 4
+        
         
