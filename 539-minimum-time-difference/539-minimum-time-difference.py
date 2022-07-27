@@ -13,7 +13,7 @@ class Solution:
         n = len(timeArr)
 
         minDiff = float('inf')
-        
+        # print()
         for x, y in zip(timeArr, timeArr[1:] + timeArr[:1]):
             minDiff = min(minDiff,(y - x)%(24*60))
         
