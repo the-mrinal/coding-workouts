@@ -1,49 +1,41 @@
-# Minimum Difficulty of a Job Schedule
+<h2>  Minimum Difficulty of a Job Schedule</h2><hr><div><p>You want to schedule a list of jobs in <code>d</code> days. Jobs are dependent (i.e To work on the <code>i<sup>th</sup></code> job, you have to finish all the jobs <code>j</code> where <code>0 &lt;= j &lt; i</code>).</p>
 
-***
+<p>You have to finish <strong>at least</strong> one task every day. The difficulty of a job schedule is the sum of difficulties of each day of the <code>d</code> days. The difficulty of a day is the maximum difficulty of a job done on that day.</p>
 
-You want to schedule a list of jobs in `d` days. Jobs are dependent (i.e To work on the `ith` job, you have to finish all the jobs `j` where `0 <= j < i`).
+<p>You are given an integer array <code>jobDifficulty</code> and an integer <code>d</code>. The difficulty of the <code>i<sup>th</sup></code> job is <code>jobDifficulty[i]</code>.</p>
 
-You have to finish **at least** one task every day. The difficulty of a job schedule is the sum of difficulties of each day of the `d` days. The difficulty of a day is the maximum difficulty of a job done on that day.
+<p>Return <em>the minimum difficulty of a job schedule</em>. If you cannot find a schedule for the jobs return <code>-1</code>.</p>
 
-You are given an integer array `jobDifficulty` and an integer `d`. The difficulty of the `ith` job is `jobDifficulty[i]`.
-
-Return _the minimum difficulty of a job schedule_. If you cannot find a schedule for the jobs return `-1`.
-
-&#x20;
-
-**Example 1:**
-
-![](https://assets.leetcode.com/uploads/2020/01/16/untitled.png)
-
-<pre><code>Input: jobDifficulty = [6,5,4,3,2,1], d = 2
-<strong>Output:
-</strong> 7
-<strong>Explanation:
-</strong> First day you can finish the first 5 jobs, total difficulty = 6.
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2020/01/16/untitled.png" style="width: 365px; height: 370px;">
+<pre><strong>Input:</strong> jobDifficulty = [6,5,4,3,2,1], d = 2
+<strong>Output:</strong> 7
+<strong>Explanation:</strong> First day you can finish the first 5 jobs, total difficulty = 6.
 Second day you can finish the last job, total difficulty = 1.
-The difficulty of the schedule = 6 + 1 = 7 </code></pre>
+The difficulty of the schedule = 6 + 1 = 7 
+</pre>
 
-**Example 2:**
+<p><strong>Example 2:</strong></p>
 
-<pre><code>Input: jobDifficulty = [9,9,9], d = 4
-<strong>Output:
-</strong> -1
-<strong>Explanation:
-</strong> If you finish a job per day you will still have a free day. you cannot find a schedule for the given jobs.</code></pre>
+<pre><strong>Input:</strong> jobDifficulty = [9,9,9], d = 4
+<strong>Output:</strong> -1
+<strong>Explanation:</strong> If you finish a job per day you will still have a free day. you cannot find a schedule for the given jobs.
+</pre>
 
-**Example 3:**
+<p><strong>Example 3:</strong></p>
 
-<pre><code>Input: jobDifficulty = [1,1,1], d = 3
-<strong>Output:
-</strong> 3
-<strong>Explanation:
-</strong> The schedule is one job per day. total difficulty will be 3.</code></pre>
+<pre><strong>Input:</strong> jobDifficulty = [1,1,1], d = 3
+<strong>Output:</strong> 3
+<strong>Explanation:</strong> The schedule is one job per day. total difficulty will be 3.
+</pre>
 
-&#x20;
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-**Constraints:**
-
-* `1 <= jobDifficulty.length <= 300`
-* `0 <= jobDifficulty[i] <= 1000`
-* `1 <= d <= 10`
+<ul>
+	<li><code>1 &lt;= jobDifficulty.length &lt;= 300</code></li>
+	<li><code>0 &lt;= jobDifficulty[i] &lt;= 1000</code></li>
+	<li><code>1 &lt;= d &lt;= 10</code></li>
+</ul>
+</div>

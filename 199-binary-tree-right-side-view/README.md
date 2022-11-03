@@ -1,36 +1,29 @@
-# 199. Binary Tree Right Side View
+<h2><a href="https://leetcode.com/problems/binary-tree-right-side-view/">199. Binary Tree Right Side View</a></h2><h3>Medium</h3><hr><div><p>Given the <code>root</code> of a binary tree, imagine yourself standing on the <strong>right side</strong> of it, return <em>the values of the nodes you can see ordered from top to bottom</em>.</p>
 
-## Medium
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/02/14/tree.jpg" style="width: 401px; height: 301px;">
+<pre><strong>Input:</strong> root = [1,2,3,null,5,null,4]
+<strong>Output:</strong> [1,3,4]
+</pre>
 
-***
+<p><strong>Example 2:</strong></p>
 
-Given the `root` of a binary tree, imagine yourself standing on the **right side** of it, return _the values of the nodes you can see ordered from top to bottom_.
+<pre><strong>Input:</strong> root = [1,null,3]
+<strong>Output:</strong> [1,3]
+</pre>
 
-&#x20;
+<p><strong>Example 3:</strong></p>
 
-**Example 1:**
+<pre><strong>Input:</strong> root = []
+<strong>Output:</strong> []
+</pre>
 
-![](https://assets.leetcode.com/uploads/2021/02/14/tree.jpg)
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-<pre><code>Input: root = [1,2,3,null,5,null,4]
-<strong>Output:
-</strong> [1,3,4]</code></pre>
-
-**Example 2:**
-
-<pre><code>Input: root = [1,null,3]
-<strong>Output:
-</strong> [1,3]</code></pre>
-
-**Example 3:**
-
-<pre><code>Input: root = []
-<strong>Output:
-</strong> []</code></pre>
-
-&#x20;
-
-**Constraints:**
-
-* The number of nodes in the tree is in the range `[0, 100]`.
-* `-100 <= Node.val <= 100`
+<ul>
+	<li>The number of nodes in the tree is in the range <code>[0, 100]</code>.</li>
+	<li><code>-100 &lt;= Node.val &lt;= 100</code></li>
+</ul>
+</div>

@@ -1,33 +1,29 @@
-# N-th Tribonacci Number
+<h2>  N-th Tribonacci Number</h2><hr><div><p>The Tribonacci sequence T<sub>n</sub> is defined as follows:&nbsp;</p>
 
-***
+<p>T<sub>0</sub> = 0, T<sub>1</sub> = 1, T<sub>2</sub> = 1, and T<sub>n+3</sub> = T<sub>n</sub> + T<sub>n+1</sub> + T<sub>n+2</sub> for n &gt;= 0.</p>
 
-The Tribonacci sequence Tn is defined as follows:&#x20;
+<p>Given <code>n</code>, return the value of T<sub>n</sub>.</p>
 
-T0 = 0, T1 = 1, T2 = 1, and Tn+3 = Tn + Tn+1 + Tn+2 for n >= 0.
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
 
-Given `n`, return the value of Tn.
+<pre><strong>Input:</strong> n = 4
+<strong>Output:</strong> 4
+<strong>Explanation:</strong>
+T_3 = 0 + 1 + 1 = 2
+T_4 = 1 + 1 + 2 = 4
+</pre>
 
-&#x20;
+<p><strong>Example 2:</strong></p>
 
-**Example 1:**
+<pre><strong>Input:</strong> n = 25
+<strong>Output:</strong> 1389537
+</pre>
 
-<pre><code>Input: n = 4
-<strong>Output:
-</strong> 4
-<strong>Explanation:
-</strong>T_3 = 0 + 1 + 1 = 2
-T_4 = 1 + 1 + 2 = 4</code></pre>
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-**Example 2:**
-
-<pre><code>Input: n = 25
-<strong>Output:
-</strong> 1389537</code></pre>
-
-&#x20;
-
-**Constraints:**
-
-* `0 <= n <= 37`
-* The answer is guaranteed to fit within a 32-bit integer, ie. `answer <= 2^31 - 1`.
+<ul>
+	<li><code>0 &lt;= n &lt;= 37</code></li>
+	<li>The answer is guaranteed to fit within a 32-bit integer, ie. <code>answer &lt;= 2^31 - 1</code>.</li>
+</ul></div>

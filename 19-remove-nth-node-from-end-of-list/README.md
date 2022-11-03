@@ -1,42 +1,34 @@
-# 19. Remove Nth Node From End of List
+<h2><a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/">19. Remove Nth Node From End of List</a></h2><h3>Medium</h3><hr><div><p>Given the <code>head</code> of a linked list, remove the <code>n<sup>th</sup></code> node from the end of the list and return its head.</p>
 
-## Medium
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2020/10/03/remove_ex1.jpg" style="width: 542px; height: 222px;">
+<pre><strong>Input:</strong> head = [1,2,3,4,5], n = 2
+<strong>Output:</strong> [1,2,3,5]
+</pre>
 
-***
+<p><strong>Example 2:</strong></p>
 
-Given the `head` of a linked list, remove the `nth` node from the end of the list and return its head.
+<pre><strong>Input:</strong> head = [1], n = 1
+<strong>Output:</strong> []
+</pre>
 
-&#x20;
+<p><strong>Example 3:</strong></p>
 
-**Example 1:**
+<pre><strong>Input:</strong> head = [1,2], n = 1
+<strong>Output:</strong> [1]
+</pre>
 
-![](https://assets.leetcode.com/uploads/2020/10/03/remove\_ex1.jpg)
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-<pre><code>Input: head = [1,2,3,4,5], n = 2
-<strong>Output:
-</strong> [1,2,3,5]</code></pre>
+<ul>
+	<li>The number of nodes in the list is <code>sz</code>.</li>
+	<li><code>1 &lt;= sz &lt;= 30</code></li>
+	<li><code>0 &lt;= Node.val &lt;= 100</code></li>
+	<li><code>1 &lt;= n &lt;= sz</code></li>
+</ul>
 
-**Example 2:**
-
-<pre><code>Input: head = [1], n = 1
-<strong>Output:
-</strong> []</code></pre>
-
-**Example 3:**
-
-<pre><code>Input: head = [1,2], n = 1
-<strong>Output:
-</strong> [1]</code></pre>
-
-&#x20;
-
-**Constraints:**
-
-* The number of nodes in the list is `sz`.
-* `1 <= sz <= 30`
-* `0 <= Node.val <= 100`
-* `1 <= n <= sz`
-
-&#x20;
-
-**Follow up:** Could you do this in one pass?
+<p>&nbsp;</p>
+<p><strong>Follow up:</strong> Could you do this in one pass?</p>
+</div>

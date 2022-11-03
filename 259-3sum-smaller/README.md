@@ -1,40 +1,33 @@
-# 259. 3Sum Smaller
+<h2><a href="https://leetcode.com/problems/3sum-smaller/">259. 3Sum Smaller</a></h2><h3>Medium</h3><hr><div><p>Given an array of <code>n</code> integers <code>nums</code> and an integer&nbsp;<code>target</code>, find the number of index triplets <code>i</code>, <code>j</code>, <code>k</code> with <code>0 &lt;= i &lt; j &lt; k &lt; n</code> that satisfy the condition <code>nums[i] + nums[j] + nums[k] &lt; target</code>.</p>
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
 
-## Medium
-
-***
-
-Given an array of `n` integers `nums` and an integer `target`, find the number of index triplets `i`, `j`, `k` with `0 <= i < j < k < n` that satisfy the condition `nums[i] + nums[j] + nums[k] < target`.
-
-&#x20;
-
-**Example 1:**
-
-<pre><code>Input: nums = [-2,0,1,3], target = 2
-<strong>Output:
-</strong> 2
-<strong>Explanation:
-</strong> Because there are two triplets which sums are less than 2:
+<pre><strong>Input:</strong> nums = [-2,0,1,3], target = 2
+<strong>Output:</strong> 2
+<strong>Explanation:</strong> Because there are two triplets which sums are less than 2:
 [-2,0,1]
-[-2,0,3]</code></pre>
+[-2,0,3]
+</pre>
 
-**Example 2:**
+<p><strong>Example 2:</strong></p>
 
-<pre><code>Input: nums = [], target = 0
-<strong>Output:
-</strong> 0</code></pre>
+<pre><strong>Input:</strong> nums = [], target = 0
+<strong>Output:</strong> 0
+</pre>
 
-**Example 3:**
+<p><strong>Example 3:</strong></p>
 
-<pre><code>Input: nums = [0], target = 0
-<strong>Output:
-</strong> 0</code></pre>
+<pre><strong>Input:</strong> nums = [0], target = 0
+<strong>Output:</strong> 0
+</pre>
 
-&#x20;
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-**Constraints:**
-
-* `n == nums.length`
-* `0 <= n <= 3500`
-* `-100 <= nums[i] <= 100`
-* `-100 <= target <= 100`
+<ul>
+	<li><code>n == nums.length</code></li>
+	<li><code>0 &lt;= n &lt;= 3500</code></li>
+	<li><code>-100 &lt;= nums[i] &lt;= 100</code></li>
+	<li><code>-100 &lt;= target &lt;= 100</code></li>
+</ul>
+</div>

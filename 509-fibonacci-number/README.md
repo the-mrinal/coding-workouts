@@ -1,46 +1,37 @@
-# 509. Fibonacci Number
+<h2><a href="https://leetcode.com/problems/fibonacci-number/">509. Fibonacci Number</a></h2><h3>Easy</h3><hr><div><p>The <b>Fibonacci numbers</b>, commonly denoted <code>F(n)</code> form a sequence, called the <b>Fibonacci sequence</b>, such that each number is the sum of the two preceding ones, starting from <code>0</code> and <code>1</code>. That is,</p>
 
-## Easy
+<pre>F(0) = 0, F(1) = 1
+F(n) = F(n - 1) + F(n - 2), for n &gt; 1.
+</pre>
 
-***
+<p>Given <code>n</code>, calculate <code>F(n)</code>.</p>
 
-The **Fibonacci numbers**, commonly denoted `F(n)` form a sequence, called the **Fibonacci sequence**, such that each number is the sum of the two preceding ones, starting from `0` and `1`. That is,
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
 
-```
-F(0) = 0, F(1) = 1
-F(n) = F(n - 1) + F(n - 2), for n > 1.
-```
+<pre><strong>Input:</strong> n = 2
+<strong>Output:</strong> 1
+<strong>Explanation:</strong> F(2) = F(1) + F(0) = 1 + 0 = 1.
+</pre>
 
-Given `n`, calculate `F(n)`.
+<p><strong>Example 2:</strong></p>
 
-&#x20;
+<pre><strong>Input:</strong> n = 3
+<strong>Output:</strong> 2
+<strong>Explanation:</strong> F(3) = F(2) + F(1) = 1 + 1 = 2.
+</pre>
 
-**Example 1:**
+<p><strong>Example 3:</strong></p>
 
-<pre><code>Input: n = 2
-<strong>Output:
-</strong> 1
-<strong>Explanation:
-</strong> F(2) = F(1) + F(0) = 1 + 0 = 1.</code></pre>
+<pre><strong>Input:</strong> n = 4
+<strong>Output:</strong> 3
+<strong>Explanation:</strong> F(4) = F(3) + F(2) = 2 + 1 = 3.
+</pre>
 
-**Example 2:**
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-<pre><code>Input: n = 3
-<strong>Output:
-</strong> 2
-<strong>Explanation:
-</strong> F(3) = F(2) + F(1) = 1 + 1 = 2.</code></pre>
-
-**Example 3:**
-
-<pre><code>Input: n = 4
-<strong>Output:
-</strong> 3
-<strong>Explanation:
-</strong> F(4) = F(3) + F(2) = 2 + 1 = 3.</code></pre>
-
-&#x20;
-
-**Constraints:**
-
-* `0 <= n <= 30`
+<ul>
+	<li><code>0 &lt;= n &lt;= 30</code></li>
+</ul>
+</div>

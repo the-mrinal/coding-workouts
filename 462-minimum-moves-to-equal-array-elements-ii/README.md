@@ -1,36 +1,31 @@
-# 462. Minimum Moves to Equal Array Elements II
+<h2><a href="https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/">462. Minimum Moves to Equal Array Elements II</a></h2><h3>Medium</h3><hr><div><p>Given an integer array <code>nums</code> of size <code>n</code>, return <em>the minimum number of moves required to make all array elements equal</em>.</p>
 
-## Medium
+<p>In one move, you can increment or decrement an element of the array by <code>1</code>.</p>
 
-***
+<p>Test cases are designed so that the answer will fit in a <strong>32-bit</strong> integer.</p>
 
-Given an integer array `nums` of size `n`, return _the minimum number of moves required to make all array elements equal_.
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
 
-In one move, you can increment or decrement an element of the array by `1`.
+<pre><strong>Input:</strong> nums = [1,2,3]
+<strong>Output:</strong> 2
+<strong>Explanation:</strong>
+Only two moves are needed (remember each move increments or decrements one element):
+[<u>1</u>,2,3]  =&gt;  [2,2,<u>3</u>]  =&gt;  [2,2,2]
+</pre>
 
-Test cases are designed so that the answer will fit in a **32-bit** integer.
+<p><strong>Example 2:</strong></p>
 
-&#x20;
+<pre><strong>Input:</strong> nums = [1,10,2,9]
+<strong>Output:</strong> 16
+</pre>
 
-**Example 1:**
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-<pre><code>Input: nums = [1,2,3]
-<strong>Output:
-</strong> 2
-<strong>Explanation:
-</strong>Only two moves are needed (remember each move increments or decrements one element):
-[1,2,3]  =>  [2,2,3]  =>  [2,2,2]</code></pre>
-
-**Example 2:**
-
-<pre><code>Input: nums = [1,10,2,9]
-<strong>Output:
-</strong> 16</code></pre>
-
-&#x20;
-
-**Constraints:**
-
-* `n == nums.length`
-* `1 <= nums.length <= 105`
-* `-109 <= nums[i] <= 109`
+<ul>
+	<li><code>n == nums.length</code></li>
+	<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>
+	<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
+</ul>
+</div>

@@ -1,30 +1,24 @@
-# 5. Longest Palindromic Substring
+<h2><a href="https://leetcode.com/problems/longest-palindromic-substring/">5. Longest Palindromic Substring</a></h2><h3>Medium</h3><hr><div><p>Given a string <code>s</code>, return <em>the longest palindromic substring</em> in <code>s</code>.</p>
 
-## Medium
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
 
-***
+<pre><strong>Input:</strong> s = "babad"
+<strong>Output:</strong> "bab"
+<strong>Explanation:</strong> "aba" is also a valid answer.
+</pre>
 
-Given a string `s`, return _the longest palindromic substring_ in `s`.
+<p><strong>Example 2:</strong></p>
 
-&#x20;
+<pre><strong>Input:</strong> s = "cbbd"
+<strong>Output:</strong> "bb"
+</pre>
 
-**Example 1:**
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-<pre><code>Input: s = "babad"
-<strong>Output:
-</strong> "bab"
-<strong>Explanation:
-</strong> "aba" is also a valid answer.</code></pre>
-
-**Example 2:**
-
-<pre><code>Input: s = "cbbd"
-<strong>Output:
-</strong> "bb"</code></pre>
-
-&#x20;
-
-**Constraints:**
-
-* `1 <= s.length <= 1000`
-* `s` consist of only digits and English letters.
+<ul>
+	<li><code>1 &lt;= s.length &lt;= 1000</code></li>
+	<li><code>s</code> consist of only digits and English letters.</li>
+</ul>
+</div>

@@ -1,37 +1,34 @@
-# 1129. Shortest Path with Alternating Colors
+<h2><a href="https://leetcode.com/problems/shortest-path-with-alternating-colors/">1129. Shortest Path with Alternating Colors</a></h2><h3>Medium</h3><hr><div><p>You are given an integer <code>n</code>, the number of nodes in a directed graph where the nodes are labeled from <code>0</code> to <code>n - 1</code>. Each edge is red or blue in this graph, and there could be self-edges and parallel edges.</p>
 
-## Medium
+<p>You are given two arrays <code>redEdges</code> and <code>blueEdges</code> where:</p>
 
-***
+<ul>
+	<li><code>redEdges[i] = [a<sub>i</sub>, b<sub>i</sub>]</code> indicates that there is a directed red edge from node <code>a<sub>i</sub></code> to node <code>b<sub>i</sub></code> in the graph, and</li>
+	<li><code>blueEdges[j] = [u<sub>j</sub>, v<sub>j</sub>]</code> indicates that there is a directed blue edge from node <code>u<sub>j</sub></code> to node <code>v<sub>j</sub></code> in the graph.</li>
+</ul>
 
-You are given an integer `n`, the number of nodes in a directed graph where the nodes are labeled from `0` to `n - 1`. Each edge is red or blue in this graph, and there could be self-edges and parallel edges.
+<p>Return an array <code>answer</code> of length <code>n</code>, where each <code>answer[x]</code> is the length of the shortest path from node <code>0</code> to node <code>x</code> such that the edge colors alternate along the path, or <code>-1</code> if such a path does not exist.</p>
 
-You are given two arrays `redEdges` and `blueEdges` where:
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
 
-* `redEdges[i] = [ai, bi]` indicates that there is a directed red edge from node `ai` to node `bi` in the graph, and
-* `blueEdges[j] = [uj, vj]` indicates that there is a directed blue edge from node `uj` to node `vj` in the graph.
+<pre><strong>Input:</strong> n = 3, redEdges = [[0,1],[1,2]], blueEdges = []
+<strong>Output:</strong> [0,1,-1]
+</pre>
 
-Return an array `answer` of length `n`, where each `answer[x]` is the length of the shortest path from node `0` to node `x` such that the edge colors alternate along the path, or `-1` if such a path does not exist.
+<p><strong>Example 2:</strong></p>
 
-&#x20;
+<pre><strong>Input:</strong> n = 3, redEdges = [[0,1]], blueEdges = [[2,1]]
+<strong>Output:</strong> [0,1,-1]
+</pre>
 
-**Example 1:**
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-<pre><code>Input: n = 3, redEdges = [[0,1],[1,2]], blueEdges = []
-<strong>Output:
-</strong> [0,1,-1]</code></pre>
-
-**Example 2:**
-
-<pre><code>Input: n = 3, redEdges = [[0,1]], blueEdges = [[2,1]]
-<strong>Output:
-</strong> [0,1,-1]</code></pre>
-
-&#x20;
-
-**Constraints:**
-
-* `1 <= n <= 100`
-* `0 <= redEdges.length, blueEdges.length <= 400`
-* `redEdges[i].length == blueEdges[j].length == 2`
-* `0 <= ai, bi, uj, vj < n`
+<ul>
+	<li><code>1 &lt;= n &lt;= 100</code></li>
+	<li><code>0 &lt;= redEdges.length,&nbsp;blueEdges.length &lt;= 400</code></li>
+	<li><code>redEdges[i].length == blueEdges[j].length == 2</code></li>
+	<li><code>0 &lt;= a<sub>i</sub>, b<sub>i</sub>, u<sub>j</sub>, v<sub>j</sub> &lt; n</code></li>
+</ul>
+</div>

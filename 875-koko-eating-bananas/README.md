@@ -1,41 +1,36 @@
-# 875. Koko Eating Bananas
+<h2><a href="https://leetcode.com/problems/koko-eating-bananas/">875. Koko Eating Bananas</a></h2><h3>Medium</h3><hr><div><p>Koko loves to eat bananas. There are <code>n</code> piles of bananas, the <code>i<sup>th</sup></code> pile has <code>piles[i]</code> bananas. The guards have gone and will come back in <code>h</code> hours.</p>
 
-## Medium
+<p>Koko can decide her bananas-per-hour eating speed of <code>k</code>. Each hour, she chooses some pile of bananas and eats <code>k</code> bananas from that pile. If the pile has less than <code>k</code> bananas, she eats all of them instead and will not eat any more bananas during this hour.</p>
 
-***
+<p>Koko likes to eat slowly but still wants to finish eating all the bananas before the guards return.</p>
 
-Koko loves to eat bananas. There are `n` piles of bananas, the `ith` pile has `piles[i]` bananas. The guards have gone and will come back in `h` hours.
+<p>Return <em>the minimum integer</em> <code>k</code> <em>such that she can eat all the bananas within</em> <code>h</code> <em>hours</em>.</p>
 
-Koko can decide her bananas-per-hour eating speed of `k`. Each hour, she chooses some pile of bananas and eats `k` bananas from that pile. If the pile has less than `k` bananas, she eats all of them instead and will not eat any more bananas during this hour.
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
 
-Koko likes to eat slowly but still wants to finish eating all the bananas before the guards return.
+<pre><strong>Input:</strong> piles = [3,6,7,11], h = 8
+<strong>Output:</strong> 4
+</pre>
 
-Return _the minimum integer_ `k` _such that she can eat all the bananas within_ `h` _hours_.
+<p><strong>Example 2:</strong></p>
 
-&#x20;
+<pre><strong>Input:</strong> piles = [30,11,23,4,20], h = 5
+<strong>Output:</strong> 30
+</pre>
 
-**Example 1:**
+<p><strong>Example 3:</strong></p>
 
-<pre><code>Input: piles = [3,6,7,11], h = 8
-<strong>Output:
-</strong> 4</code></pre>
+<pre><strong>Input:</strong> piles = [30,11,23,4,20], h = 6
+<strong>Output:</strong> 23
+</pre>
 
-**Example 2:**
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-<pre><code>Input: piles = [30,11,23,4,20], h = 5
-<strong>Output:
-</strong> 30</code></pre>
-
-**Example 3:**
-
-<pre><code>Input: piles = [30,11,23,4,20], h = 6
-<strong>Output:
-</strong> 23</code></pre>
-
-&#x20;
-
-**Constraints:**
-
-* `1 <= piles.length <= 104`
-* `piles.length <= h <= 109`
-* `1 <= piles[i] <= 109`
+<ul>
+	<li><code>1 &lt;= piles.length &lt;= 10<sup>4</sup></code></li>
+	<li><code>piles.length &lt;= h &lt;= 10<sup>9</sup></code></li>
+	<li><code>1 &lt;= piles[i] &lt;= 10<sup>9</sup></code></li>
+</ul>
+</div>

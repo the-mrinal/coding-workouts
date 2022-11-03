@@ -1,37 +1,36 @@
-# Valid Parentheses
+<h2>  Valid Parentheses</h2><hr><div><p>Given a string <code>s</code> containing just the characters <code>'('</code>, <code>')'</code>, <code>'{'</code>, <code>'}'</code>, <code>'['</code> and <code>']'</code>, determine if the input string is valid.</p>
 
-***
+<p>An input string is valid if:</p>
 
-Given a string `s` containing just the characters `'('`, `')'`, `'{'`, `'}'`, `'['` and `']'`, determine if the input string is valid.
+<ol>
+	<li>Open brackets must be closed by the same type of brackets.</li>
+	<li>Open brackets must be closed in the correct order.</li>
+</ol>
 
-An input string is valid if:
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
 
-1. Open brackets must be closed by the same type of brackets.
-2. Open brackets must be closed in the correct order.
+<pre><strong>Input:</strong> s = "()"
+<strong>Output:</strong> true
+</pre>
 
-&#x20;
+<p><strong>Example 2:</strong></p>
 
-**Example 1:**
+<pre><strong>Input:</strong> s = "()[]{}"
+<strong>Output:</strong> true
+</pre>
 
-<pre><code>Input: s = "()"
-<strong>Output:
-</strong> true</code></pre>
+<p><strong>Example 3:</strong></p>
 
-**Example 2:**
+<pre><strong>Input:</strong> s = "(]"
+<strong>Output:</strong> false
+</pre>
 
-<pre><code>Input: s = "()[]{}"
-<strong>Output:
-</strong> true</code></pre>
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-**Example 3:**
-
-<pre><code>Input: s = "(]"
-<strong>Output:
-</strong> false</code></pre>
-
-&#x20;
-
-**Constraints:**
-
-* `1 <= s.length <= 104`
-* `s` consists of parentheses only `'()[]{}'`.
+<ul>
+	<li><code>1 &lt;= s.length &lt;= 10<sup>4</sup></code></li>
+	<li><code>s</code> consists of parentheses only <code>'()[]{}'</code>.</li>
+</ul>
+</div>

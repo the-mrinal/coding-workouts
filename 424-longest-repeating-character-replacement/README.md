@@ -1,36 +1,29 @@
-# 424. Longest Repeating Character Replacement
+<h2><a href="https://leetcode.com/problems/longest-repeating-character-replacement/">424. Longest Repeating Character Replacement</a></h2><h3>Medium</h3><hr><div><p>You are given a string <code>s</code> and an integer <code>k</code>. You can choose any character of the string and change it to any other uppercase English character. You can perform this operation at most <code>k</code> times.</p>
 
-## Medium
+<p>Return <em>the length of the longest substring containing the same letter you can get after performing the above operations</em>.</p>
 
-***
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
 
-You are given a string `s` and an integer `k`. You can choose any character of the string and change it to any other uppercase English character. You can perform this operation at most `k` times.
+<pre><strong>Input:</strong> s = "ABAB", k = 2
+<strong>Output:</strong> 4
+<strong>Explanation:</strong> Replace the two 'A's with two 'B's or vice versa.
+</pre>
 
-Return _the length of the longest substring containing the same letter you can get after performing the above operations_.
+<p><strong>Example 2:</strong></p>
 
-&#x20;
+<pre><strong>Input:</strong> s = "AABABBA", k = 1
+<strong>Output:</strong> 4
+<strong>Explanation:</strong> Replace the one 'A' in the middle with 'B' and form "AABBBBA".
+The substring "BBBB" has the longest repeating letters, which is 4.
+</pre>
 
-**Example 1:**
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-<pre><code>Input: s = "ABAB", k = 2
-<strong>Output:
-</strong> 4
-<strong>Explanation:
-</strong> Replace the two 'A's with two 'B's or vice versa.</code></pre>
-
-**Example 2:**
-
-<pre><code>Input: s = "AABABBA", k = 1
-<strong>Output:
-</strong> 4
-<strong>Explanation:
-</strong> Replace the one 'A' in the middle with 'B' and form "AABBBBA".
-The substring "BBBB" has the longest repeating letters, which is 4.</code></pre>
-
-&#x20;
-
-**Constraints:**
-
-* `1 <= s.length <= 105`
-* `s` consists of only uppercase English letters.
-* `0 <= k <= s.length`
+<ul>
+	<li><code>1 &lt;= s.length &lt;= 10<sup>5</sup></code></li>
+	<li><code>s</code> consists of only uppercase English letters.</li>
+	<li><code>0 &lt;= k &lt;= s.length</code></li>
+</ul>
+</div>

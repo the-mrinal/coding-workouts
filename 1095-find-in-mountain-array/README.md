@@ -1,49 +1,48 @@
-# 1095. Find in Mountain Array
+<h2><a href="https://leetcode.com/problems/find-in-mountain-array/">1095. Find in Mountain Array</a></h2><h3>Hard</h3><hr><div><p><em>(This problem is an <strong>interactive problem</strong>.)</em></p>
 
-## Hard
+<p>You may recall that an array <code>arr</code> is a <strong>mountain array</strong> if and only if:</p>
 
-***
+<ul>
+	<li><code>arr.length &gt;= 3</code></li>
+	<li>There exists some <code>i</code> with <code>0 &lt; i &lt; arr.length - 1</code> such that:
+	<ul>
+		<li><code>arr[0] &lt; arr[1] &lt; ... &lt; arr[i - 1] &lt; arr[i]</code></li>
+		<li><code>arr[i] &gt; arr[i + 1] &gt; ... &gt; arr[arr.length - 1]</code></li>
+	</ul>
+	</li>
+</ul>
 
-_(This problem is an **interactive problem**.)_
+<p>Given a mountain array <code>mountainArr</code>, return the <strong>minimum</strong> <code>index</code> such that <code>mountainArr.get(index) == target</code>. If such an <code>index</code> does not exist, return <code>-1</code>.</p>
 
-You may recall that an array `arr` is a **mountain array** if and only if:
+<p><strong>You cannot access the mountain array directly.</strong> You may only access the array using a <code>MountainArray</code> interface:</p>
 
-* `arr.length >= 3`
-* There exists some `i` with `0 < i < arr.length - 1` such that:
-  * `arr[0] < arr[1] < ... < arr[i - 1] < arr[i]`
-  * `arr[i] > arr[i + 1] > ... > arr[arr.length - 1]`
+<ul>
+	<li><code>MountainArray.get(k)</code> returns the element of the array at index <code>k</code> (0-indexed).</li>
+	<li><code>MountainArray.length()</code> returns the length of the array.</li>
+</ul>
 
-Given a mountain array `mountainArr`, return the **minimum** `index` such that `mountainArr.get(index) == target`. If such an `index` does not exist, return `-1`.
+<p>Submissions making more than <code>100</code> calls to <code>MountainArray.get</code> will be judged <em>Wrong Answer</em>. Also, any solutions that attempt to circumvent the judge will result in disqualification.</p>
 
-**You cannot access the mountain array directly.** You may only access the array using a `MountainArray` interface:
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
 
-* `MountainArray.get(k)` returns the element of the array at index `k` (0-indexed).
-* `MountainArray.length()` returns the length of the array.
+<pre><strong>Input:</strong> array = [1,2,3,4,5,3,1], target = 3
+<strong>Output:</strong> 2
+<strong>Explanation:</strong> 3 exists in the array, at index=2 and index=5. Return the minimum index, which is 2.</pre>
 
-Submissions making more than `100` calls to `MountainArray.get` will be judged _Wrong Answer_. Also, any solutions that attempt to circumvent the judge will result in disqualification.
+<p><strong>Example 2:</strong></p>
 
-&#x20;
+<pre><strong>Input:</strong> array = [0,1,2,4,2,1], target = 3
+<strong>Output:</strong> -1
+<strong>Explanation:</strong> 3 does not exist in <code>the array,</code> so we return -1.
+</pre>
 
-**Example 1:**
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-<pre><code>Input: array = [1,2,3,4,5,3,1], target = 3
-<strong>Output:
-</strong> 2
-<strong>Explanation:
-</strong> 3 exists in the array, at index=2 and index=5. Return the minimum index, which is 2.</code></pre>
-
-**Example 2:**
-
-<pre><code>Input: array = [0,1,2,4,2,1], target = 3
-<strong>Output:
-</strong> -1
-<strong>Explanation:
-</strong> 3 does not exist in the array, so we return -1.</code></pre>
-
-&#x20;
-
-**Constraints:**
-
-* `3 <= mountain_arr.length() <= 104`
-* `0 <= target <= 109`
-* `0 <= mountain_arr.get(index) <= 109`
+<ul>
+	<li><code>3 &lt;= mountain_arr.length() &lt;= 10<sup>4</sup></code></li>
+	<li><code>0 &lt;= target &lt;= 10<sup>9</sup></code></li>
+	<li><code>0 &lt;= mountain_arr.get(index) &lt;= 10<sup>9</sup></code></li>
+</ul>
+</div>

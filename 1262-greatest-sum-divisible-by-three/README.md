@@ -1,40 +1,31 @@
-# 1262. Greatest Sum Divisible by Three
+<h2><a href="https://leetcode.com/problems/greatest-sum-divisible-by-three/">1262. Greatest Sum Divisible by Three</a></h2><h3>Medium</h3><hr><div><p>Given an integer array <code>nums</code>, return <em>the <strong>maximum possible sum </strong>of elements of the array such that it is divisible by three</em>.</p>
 
-## Medium
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
 
-***
+<pre><strong>Input:</strong> nums = [3,6,5,1,8]
+<strong>Output:</strong> 18
+<strong>Explanation:</strong> Pick numbers 3, 6, 1 and 8 their sum is 18 (maximum sum divisible by 3).</pre>
 
-Given an integer array `nums`, return _the **maximum possible sum** of elements of the array such that it is divisible by three_.
+<p><strong>Example 2:</strong></p>
 
-&#x20;
+<pre><strong>Input:</strong> nums = [4]
+<strong>Output:</strong> 0
+<strong>Explanation:</strong> Since 4 is not divisible by 3, do not pick any number.
+</pre>
 
-**Example 1:**
+<p><strong>Example 3:</strong></p>
 
-<pre><code>Input: nums = [3,6,5,1,8]
-<strong>Output:
-</strong> 18
-<strong>Explanation:
-</strong> Pick numbers 3, 6, 1 and 8 their sum is 18 (maximum sum divisible by 3).</code></pre>
+<pre><strong>Input:</strong> nums = [1,2,3,4,4]
+<strong>Output:</strong> 12
+<strong>Explanation:</strong> Pick numbers 1, 3, 4 and 4 their sum is 12 (maximum sum divisible by 3).
+</pre>
 
-**Example 2:**
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-<pre><code>Input: nums = [4]
-<strong>Output:
-</strong> 0
-<strong>Explanation:
-</strong> Since 4 is not divisible by 3, do not pick any number.</code></pre>
-
-**Example 3:**
-
-<pre><code>Input: nums = [1,2,3,4,4]
-<strong>Output:
-</strong> 12
-<strong>Explanation:
-</strong> Pick numbers 1, 3, 4 and 4 their sum is 12 (maximum sum divisible by 3).</code></pre>
-
-&#x20;
-
-**Constraints:**
-
-* `1 <= nums.length <= 4 * 10^4`
-* `1 <= nums[i] <= 10^4`
+<ul>
+	<li><code>1 &lt;= nums.length &lt;= 4 * 10^4</code></li>
+	<li><code>1 &lt;= nums[i] &lt;= 10^4</code></li>
+</ul>
+</div>

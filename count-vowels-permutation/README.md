@@ -1,44 +1,40 @@
-# Count Vowels Permutation
+<h2>  Count Vowels Permutation</h2><hr><div><p>Given an integer <code>n</code>, your task is to count how many strings of length <code>n</code> can be formed under the following rules:</p>
 
-***
+<ul>
+	<li>Each character is a lower case vowel&nbsp;(<code>'a'</code>, <code>'e'</code>, <code>'i'</code>, <code>'o'</code>, <code>'u'</code>)</li>
+	<li>Each vowel&nbsp;<code>'a'</code> may only be followed by an <code>'e'</code>.</li>
+	<li>Each vowel&nbsp;<code>'e'</code> may only be followed by an <code>'a'</code>&nbsp;or an <code>'i'</code>.</li>
+	<li>Each vowel&nbsp;<code>'i'</code> <strong>may not</strong> be followed by another <code>'i'</code>.</li>
+	<li>Each vowel&nbsp;<code>'o'</code> may only be followed by an <code>'i'</code> or a&nbsp;<code>'u'</code>.</li>
+	<li>Each vowel&nbsp;<code>'u'</code> may only be followed by an <code>'a'.</code></li>
+</ul>
 
-Given an integer `n`, your task is to count how many strings of length `n` can be formed under the following rules:
+<p>Since the answer&nbsp;may be too large,&nbsp;return it modulo <code>10^9 + 7.</code></p>
 
-* Each character is a lower case vowel (`'a'`, `'e'`, `'i'`, `'o'`, `'u'`)
-* Each vowel `'a'` may only be followed by an `'e'`.
-* Each vowel `'e'` may only be followed by an `'a'` or an `'i'`.
-* Each vowel `'i'` **may not** be followed by another `'i'`.
-* Each vowel `'o'` may only be followed by an `'i'` or a `'u'`.
-* Each vowel `'u'` may only be followed by an `'a'.`
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
 
-Since the answer may be too large, return it modulo `10^9 + 7.`
+<pre><strong>Input:</strong> n = 1
+<strong>Output:</strong> 5
+<strong>Explanation:</strong> All possible strings are: "a", "e", "i" , "o" and "u".
+</pre>
 
-&#x20;
+<p><strong>Example 2:</strong></p>
 
-**Example 1:**
+<pre><strong>Input:</strong> n = 2
+<strong>Output:</strong> 10
+<strong>Explanation:</strong> All possible strings are: "ae", "ea", "ei", "ia", "ie", "io", "iu", "oi", "ou" and "ua".
+</pre>
 
-<pre><code>Input: n = 1
-<strong>Output:
-</strong> 5
-<strong>Explanation:
-</strong> All possible strings are: "a", "e", "i" , "o" and "u".</code></pre>
+<p><strong>Example 3:&nbsp;</strong></p>
 
-**Example 2:**
+<pre><strong>Input:</strong> n = 5
+<strong>Output:</strong> 68</pre>
 
-<pre><code>Input: n = 2
-<strong>Output:
-</strong> 10
-<strong>Explanation:
-</strong> All possible strings are: "ae", "ea", "ei", "ia", "ie", "io", "iu", "oi", "ou" and "ua".</code></pre>
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-**Example 3:**&#x20;
-
-<pre><code>Input: n = 5
-<strong>Output:
-</strong> 68</code></pre>
-
-&#x20;
-
-**Constraints:**
-
-* `1 <= n <= 2 * 10^4`
+<ul>
+	<li><code>1 &lt;= n &lt;= 2 * 10^4</code></li>
+</ul>
+</div>

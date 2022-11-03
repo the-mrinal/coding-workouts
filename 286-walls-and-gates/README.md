@@ -1,38 +1,33 @@
-# 286. Walls and Gates
+<h2><a href="https://leetcode.com/problems/walls-and-gates/">286. Walls and Gates</a></h2><h3>Medium</h3><hr><div><p>You are given an <code>m x n</code> grid <code>rooms</code>&nbsp;initialized with these three possible values.</p>
 
-## Medium
+<ul>
+	<li><code>-1</code>&nbsp;A wall or an obstacle.</li>
+	<li><code>0</code> A gate.</li>
+	<li><code>INF</code> Infinity means an empty room. We use the value <code>2<sup>31</sup> - 1 = 2147483647</code> to represent <code>INF</code> as you may assume that the distance to a gate is less than <code>2147483647</code>.</li>
+</ul>
 
-***
+<p>Fill each empty room with the distance to <em>its nearest gate</em>. If it is impossible to reach a gate, it should be filled with <code>INF</code>.</p>
 
-You are given an `m x n` grid `rooms` initialized with these three possible values.
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/01/03/grid.jpg" style="width: 500px; height: 223px;">
+<pre><strong>Input:</strong> rooms = [[2147483647,-1,0,2147483647],[2147483647,2147483647,2147483647,-1],[2147483647,-1,2147483647,-1],[0,-1,2147483647,2147483647]]
+<strong>Output:</strong> [[3,-1,0,1],[2,2,1,-1],[1,-1,2,-1],[0,-1,3,4]]
+</pre>
 
-* `-1` A wall or an obstacle.
-* `0` A gate.
-* `INF` Infinity means an empty room. We use the value `231 - 1 = 2147483647` to represent `INF` as you may assume that the distance to a gate is less than `2147483647`.
+<p><strong>Example 2:</strong></p>
 
-Fill each empty room with the distance to _its nearest gate_. If it is impossible to reach a gate, it should be filled with `INF`.
+<pre><strong>Input:</strong> rooms = [[-1]]
+<strong>Output:</strong> [[-1]]
+</pre>
 
-&#x20;
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-**Example 1:**
-
-![](https://assets.leetcode.com/uploads/2021/01/03/grid.jpg)
-
-<pre><code>Input: rooms = [[2147483647,-1,0,2147483647],[2147483647,2147483647,2147483647,-1],[2147483647,-1,2147483647,-1],[0,-1,2147483647,2147483647]]
-<strong>Output:
-</strong> [[3,-1,0,1],[2,2,1,-1],[1,-1,2,-1],[0,-1,3,4]]</code></pre>
-
-**Example 2:**
-
-<pre><code>Input: rooms = [[-1]]
-<strong>Output:
-</strong> [[-1]]</code></pre>
-
-&#x20;
-
-**Constraints:**
-
-* `m == rooms.length`
-* `n == rooms[i].length`
-* `1 <= m, n <= 250`
-* `rooms[i][j]` is `-1`, `0`, or `231 - 1`.
+<ul>
+	<li><code>m == rooms.length</code></li>
+	<li><code>n == rooms[i].length</code></li>
+	<li><code>1 &lt;= m, n &lt;= 250</code></li>
+	<li><code>rooms[i][j]</code> is <code>-1</code>, <code>0</code>, or <code>2<sup>31</sup> - 1</code>.</li>
+</ul>
+</div>

@@ -1,42 +1,37 @@
-# 934. Shortest Bridge
+<h2><a href="https://leetcode.com/problems/shortest-bridge/">934. Shortest Bridge</a></h2><h3>Medium</h3><hr><div><p>You are given an <code>n x n</code> binary matrix <code>grid</code> where <code>1</code> represents land and <code>0</code> represents water.</p>
 
-## Medium
+<p>An <strong>island</strong> is a 4-directionally connected group of <code>1</code>'s not connected to any other <code>1</code>'s. There are <strong>exactly two islands</strong> in <code>grid</code>.</p>
 
-***
+<p>You may change <code>0</code>'s to <code>1</code>'s to connect the two islands to form <strong>one island</strong>.</p>
 
-You are given an `n x n` binary matrix `grid` where `1` represents land and `0` represents water.
+<p>Return <em>the smallest number of </em><code>0</code><em>'s you must flip to connect the two islands</em>.</p>
 
-An **island** is a 4-directionally connected group of `1`'s not connected to any other `1`'s. There are **exactly two islands** in `grid`.
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
 
-You may change `0`'s to `1`'s to connect the two islands to form **one island**.
+<pre><strong>Input:</strong> grid = [[0,1],[1,0]]
+<strong>Output:</strong> 1
+</pre>
 
-Return _the smallest number of_ `0`_'s you must flip to connect the two islands_.
+<p><strong>Example 2:</strong></p>
 
-&#x20;
+<pre><strong>Input:</strong> grid = [[0,1,0],[0,0,0],[0,0,1]]
+<strong>Output:</strong> 2
+</pre>
 
-**Example 1:**
+<p><strong>Example 3:</strong></p>
 
-<pre><code>Input: grid = [[0,1],[1,0]]
-<strong>Output:
-</strong> 1</code></pre>
+<pre><strong>Input:</strong> grid = [[1,1,1,1,1],[1,0,0,0,1],[1,0,1,0,1],[1,0,0,0,1],[1,1,1,1,1]]
+<strong>Output:</strong> 1
+</pre>
 
-**Example 2:**
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-<pre><code>Input: grid = [[0,1,0],[0,0,0],[0,0,1]]
-<strong>Output:
-</strong> 2</code></pre>
-
-**Example 3:**
-
-<pre><code>Input: grid = [[1,1,1,1,1],[1,0,0,0,1],[1,0,1,0,1],[1,0,0,0,1],[1,1,1,1,1]]
-<strong>Output:
-</strong> 1</code></pre>
-
-&#x20;
-
-**Constraints:**
-
-* `n == grid.length == grid[i].length`
-* `2 <= n <= 100`
-* `grid[i][j]` is either `0` or `1`.
-* There are exactly two islands in `grid`.
+<ul>
+	<li><code>n == grid.length == grid[i].length</code></li>
+	<li><code>2 &lt;= n &lt;= 100</code></li>
+	<li><code>grid[i][j]</code> is either <code>0</code> or <code>1</code>.</li>
+	<li>There are exactly two islands in <code>grid</code>.</li>
+</ul>
+</div>

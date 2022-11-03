@@ -1,39 +1,35 @@
-# 256. Paint House
+<h2><a href="https://leetcode.com/problems/paint-house/">256. Paint House</a></h2><h3>Medium</h3><hr><div><p>There is a row of <code>n</code> houses, where each house can be painted one of three colors: red, blue, or green. The cost of painting each house with a certain color is different. You have to paint all the houses such that no two adjacent houses have the same color.</p>
 
-## Medium
+<p>The cost of painting each house with a certain color is represented by an <code>n x 3</code> cost matrix <code>costs</code>.</p>
 
-***
+<ul>
+	<li>For example, <code>costs[0][0]</code> is the cost of painting house <code>0</code> with the color red; <code>costs[1][2]</code> is the cost of painting house 1 with color green, and so on...</li>
+</ul>
 
-There is a row of `n` houses, where each house can be painted one of three colors: red, blue, or green. The cost of painting each house with a certain color is different. You have to paint all the houses such that no two adjacent houses have the same color.
+<p>Return <em>the minimum cost to paint all houses</em>.</p>
 
-The cost of painting each house with a certain color is represented by an `n x 3` cost matrix `costs`.
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
 
-* For example, `costs[0][0]` is the cost of painting house `0` with the color red; `costs[1][2]` is the cost of painting house 1 with color green, and so on...
+<pre><strong>Input:</strong> costs = [[17,2,17],[16,16,5],[14,3,19]]
+<strong>Output:</strong> 10
+<strong>Explanation:</strong> Paint house 0 into blue, paint house 1 into green, paint house 2 into blue.
+Minimum cost: 2 + 5 + 3 = 10.
+</pre>
 
-Return _the minimum cost to paint all houses_.
+<p><strong>Example 2:</strong></p>
 
-&#x20;
+<pre><strong>Input:</strong> costs = [[7,6,2]]
+<strong>Output:</strong> 2
+</pre>
 
-**Example 1:**
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-<pre><code>Input: costs = [[17,2,17],[16,16,5],[14,3,19]]
-<strong>Output:
-</strong> 10
-<strong>Explanation:
-</strong> Paint house 0 into blue, paint house 1 into green, paint house 2 into blue.
-Minimum cost: 2 + 5 + 3 = 10.</code></pre>
-
-**Example 2:**
-
-<pre><code>Input: costs = [[7,6,2]]
-<strong>Output:
-</strong> 2</code></pre>
-
-&#x20;
-
-**Constraints:**
-
-* `costs.length == n`
-* `costs[i].length == 3`
-* `1 <= n <= 100`
-* `1 <= costs[i][j] <= 20`
+<ul>
+	<li><code>costs.length == n</code></li>
+	<li><code>costs[i].length == 3</code></li>
+	<li><code>1 &lt;= n &lt;= 100</code></li>
+	<li><code>1 &lt;= costs[i][j] &lt;= 20</code></li>
+</ul>
+</div>

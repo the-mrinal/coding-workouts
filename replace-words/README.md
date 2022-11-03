@@ -1,37 +1,34 @@
-# Replace Words
+<h2>  Replace Words</h2><hr><div><p>In English, we have a concept called <strong>root</strong>, which can be followed by some other word to form another longer word - let's call this word <strong>successor</strong>. For example, when the <strong>root</strong> <code>"an"</code> is followed by the <strong>successor</strong> word <code>"other"</code>, we can form a new word <code>"another"</code>.</p>
 
-***
+<p>Given a <code>dictionary</code> consisting of many <strong>roots</strong> and a <code>sentence</code> consisting of words separated by spaces, replace all the <strong>successors</strong> in the sentence with the <strong>root</strong> forming it. If a <strong>successor</strong> can be replaced by more than one <strong>root</strong>, replace it with the <strong>root</strong> that has <strong>the shortest length</strong>.</p>
 
-In English, we have a concept called **root**, which can be followed by some other word to form another longer word - let's call this word **successor**. For example, when the **root** `"an"` is followed by the **successor** word `"other"`, we can form a new word `"another"`.
+<p>Return <em>the <code>sentence</code></em> after the replacement.</p>
 
-Given a `dictionary` consisting of many **roots** and a `sentence` consisting of words separated by spaces, replace all the **successors** in the sentence with the **root** forming it. If a **successor** can be replaced by more than one **root**, replace it with the **root** that has **the shortest length**.
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
 
-Return _the `sentence`_ after the replacement.
+<pre><strong>Input:</strong> dictionary = ["cat","bat","rat"], sentence = "the cattle was rattled by the battery"
+<strong>Output:</strong> "the cat was rat by the bat"
+</pre>
 
-&#x20;
+<p><strong>Example 2:</strong></p>
 
-**Example 1:**
+<pre><strong>Input:</strong> dictionary = ["a","b","c"], sentence = "aadsfasf absbs bbab cadsfafs"
+<strong>Output:</strong> "a a b c"
+</pre>
 
-<pre><code>Input: dictionary = ["cat","bat","rat"], sentence = "the cattle was rattled by the battery"
-<strong>Output:
-</strong> "the cat was rat by the bat"</code></pre>
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-**Example 2:**
-
-<pre><code>Input: dictionary = ["a","b","c"], sentence = "aadsfasf absbs bbab cadsfafs"
-<strong>Output:
-</strong> "a a b c"</code></pre>
-
-&#x20;
-
-**Constraints:**
-
-* `1 <= dictionary.length <= 1000`
-* `1 <= dictionary[i].length <= 100`
-* `dictionary[i]` consists of only lower-case letters.
-* `1 <= sentence.length <= 106`
-* `sentence` consists of only lower-case letters and spaces.
-* The number of words in `sentence` is in the range `[1, 1000]`
-* The length of each word in `sentence` is in the range `[1, 1000]`
-* Every two consecutive words in `sentence` will be separated by exactly one space.
-* `sentence` does not have leading or trailing spaces.
+<ul>
+	<li><code>1 &lt;= dictionary.length &lt;= 1000</code></li>
+	<li><code>1 &lt;= dictionary[i].length &lt;= 100</code></li>
+	<li><code>dictionary[i]</code> consists of only lower-case letters.</li>
+	<li><code>1 &lt;= sentence.length &lt;= 10<sup>6</sup></code></li>
+	<li><code>sentence</code> consists of only lower-case letters and spaces.</li>
+	<li>The number of words in <code>sentence</code> is in the range <code>[1, 1000]</code></li>
+	<li>The length of each word in <code>sentence</code> is in the range <code>[1, 1000]</code></li>
+	<li>Every two consecutive words in <code>sentence</code> will be separated by exactly one space.</li>
+	<li><code>sentence</code> does not have leading or trailing spaces.</li>
+</ul>
+</div>

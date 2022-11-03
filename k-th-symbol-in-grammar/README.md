@@ -1,46 +1,42 @@
-# K-th Symbol in Grammar
+<h2>  K-th Symbol in Grammar</h2><hr><div><p>We build a table of <code>n</code> rows (<strong>1-indexed</strong>). We start by writing <code>0</code> in the <code>1<sup>st</sup></code> row. Now in every subsequent row, we look at the previous row and replace each occurrence of <code>0</code> with <code>01</code>, and each occurrence of <code>1</code> with <code>10</code>.</p>
 
-***
+<ul>
+	<li>For example, for <code>n = 3</code>, the <code>1<sup>st</sup></code> row is <code>0</code>, the <code>2<sup>nd</sup></code> row is <code>01</code>, and the <code>3<sup>rd</sup></code> row is <code>0110</code>.</li>
+</ul>
 
-We build a table of `n` rows (**1-indexed**). We start by writing `0` in the `1st` row. Now in every subsequent row, we look at the previous row and replace each occurrence of `0` with `01`, and each occurrence of `1` with `10`.
+<p>Given two integer <code>n</code> and <code>k</code>, return the <code>k<sup>th</sup></code> (<strong>1-indexed</strong>) symbol in the <code>n<sup>th</sup></code> row of a table of <code>n</code> rows.</p>
 
-* For example, for `n = 3`, the `1st` row is `0`, the `2nd` row is `01`, and the `3rd` row is `0110`.
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
 
-Given two integer `n` and `k`, return the `kth` (**1-indexed**) symbol in the `nth` row of a table of `n` rows.
+<pre><strong>Input:</strong> n = 1, k = 1
+<strong>Output:</strong> 0
+<strong>Explanation:</strong> row 1: <u>0</u>
+</pre>
 
-&#x20;
+<p><strong>Example 2:</strong></p>
 
-**Example 1:**
-
-<pre><code>Input: n = 1, k = 1
-<strong>Output:
-</strong> 0
-<strong>Explanation:
-</strong> row 1: 0</code></pre>
-
-**Example 2:**
-
-<pre><code>Input: n = 2, k = 1
-<strong>Output:
-</strong> 0
-<strong>Explanation:
-</strong> 
+<pre><strong>Input:</strong> n = 2, k = 1
+<strong>Output:</strong> 0
+<strong>Explanation:</strong> 
 row 1: 0
-row 2: 01</code></pre>
+row 2: <u>0</u>1
+</pre>
 
-**Example 3:**
+<p><strong>Example 3:</strong></p>
 
-<pre><code>Input: n = 2, k = 2
-<strong>Output:
-</strong> 1
-<strong>Explanation:
-</strong> 
+<pre><strong>Input:</strong> n = 2, k = 2
+<strong>Output:</strong> 1
+<strong>Explanation:</strong> 
 row 1: 0
-row 2: 01</code></pre>
+row 2: 0<u>1</u>
+</pre>
 
-&#x20;
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-**Constraints:**
-
-* `1 <= n <= 30`
-* `1 <= k <= 2n - 1`
+<ul>
+	<li><code>1 &lt;= n &lt;= 30</code></li>
+	<li><code>1 &lt;= k &lt;= 2<sup>n - 1</sup></code></li>
+</ul>
+</div>

@@ -1,38 +1,27 @@
-# 668. Kth Smallest Number in Multiplication Table
+<h2><a href="https://leetcode.com/problems/kth-smallest-number-in-multiplication-table/">668. Kth Smallest Number in Multiplication Table</a></h2><h3>Hard</h3><hr><div><p>Nearly everyone has used the <a href="https://en.wikipedia.org/wiki/Multiplication_table" target="_blank">Multiplication Table</a>. The multiplication table of size <code>m x n</code> is an integer matrix <code>mat</code> where <code>mat[i][j] == i * j</code> (<strong>1-indexed</strong>).</p>
 
-## Hard
+<p>Given three integers <code>m</code>, <code>n</code>, and <code>k</code>, return <em>the </em><code>k<sup>th</sup></code><em> smallest element in the </em><code>m x n</code><em> multiplication table</em>.</p>
 
-***
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/05/02/multtable1-grid.jpg" style="width: 500px; height: 254px;">
+<pre><strong>Input:</strong> m = 3, n = 3, k = 5
+<strong>Output:</strong> 3
+<strong>Explanation:</strong> The 5<sup>th</sup> smallest number is 3.
+</pre>
 
-Nearly everyone has used the [Multiplication Table](https://en.wikipedia.org/wiki/Multiplication\_table). The multiplication table of size `m x n` is an integer matrix `mat` where `mat[i][j] == i * j` (**1-indexed**).
+<p><strong>Example 2:</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/05/02/multtable2-grid.jpg" style="width: 493px; height: 293px;">
+<pre><strong>Input:</strong> m = 2, n = 3, k = 6
+<strong>Output:</strong> 6
+<strong>Explanation:</strong> The 6<sup>th</sup> smallest number is 6.
+</pre>
 
-Given three integers `m`, `n`, and `k`, return _the_ `kth` _smallest element in the_ `m x n` _multiplication table_.
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-&#x20;
-
-**Example 1:**
-
-![](https://assets.leetcode.com/uploads/2021/05/02/multtable1-grid.jpg)
-
-<pre><code>Input: m = 3, n = 3, k = 5
-<strong>Output:
-</strong> 3
-<strong>Explanation:
-</strong> The 5th smallest number is 3.</code></pre>
-
-**Example 2:**
-
-![](https://assets.leetcode.com/uploads/2021/05/02/multtable2-grid.jpg)
-
-<pre><code>Input: m = 2, n = 3, k = 6
-<strong>Output:
-</strong> 6
-<strong>Explanation:
-</strong> The 6th smallest number is 6.</code></pre>
-
-&#x20;
-
-**Constraints:**
-
-* `1 <= m, n <= 3 * 104`
-* `1 <= k <= m * n`
+<ul>
+	<li><code>1 &lt;= m, n &lt;= 3 * 10<sup>4</sup></code></li>
+	<li><code>1 &lt;= k &lt;= m * n</code></li>
+</ul>
+</div>

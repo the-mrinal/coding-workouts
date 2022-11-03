@@ -1,38 +1,33 @@
-# 35. Search Insert Position
+<h2><a href="https://leetcode.com/problems/search-insert-position/">35. Search Insert Position</a></h2><h3>Easy</h3><hr><div><p>Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.</p>
 
-## Easy
+<p>You must&nbsp;write an algorithm with&nbsp;<code>O(log n)</code> runtime complexity.</p>
 
-***
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
 
-Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
+<pre><strong>Input:</strong> nums = [1,3,5,6], target = 5
+<strong>Output:</strong> 2
+</pre>
 
-You must write an algorithm with `O(log n)` runtime complexity.
+<p><strong>Example 2:</strong></p>
 
-&#x20;
+<pre><strong>Input:</strong> nums = [1,3,5,6], target = 2
+<strong>Output:</strong> 1
+</pre>
 
-**Example 1:**
+<p><strong>Example 3:</strong></p>
 
-<pre><code>Input: nums = [1,3,5,6], target = 5
-<strong>Output:
-</strong> 2</code></pre>
+<pre><strong>Input:</strong> nums = [1,3,5,6], target = 7
+<strong>Output:</strong> 4
+</pre>
 
-**Example 2:**
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-<pre><code>Input: nums = [1,3,5,6], target = 2
-<strong>Output:
-</strong> 1</code></pre>
-
-**Example 3:**
-
-<pre><code>Input: nums = [1,3,5,6], target = 7
-<strong>Output:
-</strong> 4</code></pre>
-
-&#x20;
-
-**Constraints:**
-
-* `1 <= nums.length <= 104`
-* `-104 <= nums[i] <= 104`
-* `nums` contains **distinct** values sorted in **ascending** order.
-* `-104 <= target <= 104`
+<ul>
+	<li><code>1 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>
+	<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>
+	<li><code>nums</code> contains <strong>distinct</strong> values sorted in <strong>ascending</strong> order.</li>
+	<li><code>-10<sup>4</sup> &lt;= target &lt;= 10<sup>4</sup></code></li>
+</ul>
+</div>

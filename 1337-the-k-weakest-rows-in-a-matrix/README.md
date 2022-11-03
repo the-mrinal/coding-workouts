@@ -1,66 +1,61 @@
-# 1337. The K Weakest Rows in a Matrix
+<h2><a href="https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/">1337. The K Weakest Rows in a Matrix</a></h2><h3>Easy</h3><hr><div><p>You are given an <code>m x n</code> binary matrix <code>mat</code> of <code>1</code>'s (representing soldiers) and <code>0</code>'s (representing civilians). The soldiers are positioned <strong>in front</strong> of the civilians. That is, all the <code>1</code>'s will appear to the <strong>left</strong> of all the <code>0</code>'s in each row.</p>
 
-## Easy
+<p>A row <code>i</code> is <strong>weaker</strong> than a row <code>j</code> if one of the following is true:</p>
 
-***
+<ul>
+	<li>The number of soldiers in row <code>i</code> is less than the number of soldiers in row <code>j</code>.</li>
+	<li>Both rows have the same number of soldiers and <code>i &lt; j</code>.</li>
+</ul>
 
-You are given an `m x n` binary matrix `mat` of `1`'s (representing soldiers) and `0`'s (representing civilians). The soldiers are positioned **in front** of the civilians. That is, all the `1`'s will appear to the **left** of all the `0`'s in each row.
+<p>Return <em>the indices of the </em><code>k</code><em> <strong>weakest</strong> rows in the matrix ordered from weakest to strongest</em>.</p>
 
-A row `i` is **weaker** than a row `j` if one of the following is true:
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
 
-* The number of soldiers in row `i` is less than the number of soldiers in row `j`.
-* Both rows have the same number of soldiers and `i < j`.
-
-Return _the indices of the_ `k` _ **weakest** rows in the matrix ordered from weakest to strongest_.
-
-&#x20;
-
-**Example 1:**
-
-<pre><code>Input: mat = 
+<pre><strong>Input:</strong> mat = 
 [[1,1,0,0,0],
  [1,1,1,1,0],
  [1,0,0,0,0],
  [1,1,0,0,0],
  [1,1,1,1,1]], 
 k = 3
-<strong>Output:
-</strong> [2,0,3]
-<strong>Explanation:
-</strong> 
+<strong>Output:</strong> [2,0,3]
+<strong>Explanation:</strong> 
 The number of soldiers in each row is: 
 - Row 0: 2 
 - Row 1: 4 
 - Row 2: 1 
 - Row 3: 2 
 - Row 4: 5 
-The rows ordered from weakest to strongest are [2,0,3,1,4].</code></pre>
+The rows ordered from weakest to strongest are [2,0,3,1,4].
+</pre>
 
-**Example 2:**
+<p><strong>Example 2:</strong></p>
 
-<pre><code>Input: mat = 
+<pre><strong>Input:</strong> mat = 
 [[1,0,0,0],
  [1,1,1,1],
  [1,0,0,0],
  [1,0,0,0]], 
 k = 2
-<strong>Output:
-</strong> [0,2]
-<strong>Explanation:
-</strong> 
+<strong>Output:</strong> [0,2]
+<strong>Explanation:</strong> 
 The number of soldiers in each row is: 
 - Row 0: 1 
 - Row 1: 4 
 - Row 2: 1 
 - Row 3: 1 
-The rows ordered from weakest to strongest are [0,2,3,1].</code></pre>
+The rows ordered from weakest to strongest are [0,2,3,1].
+</pre>
 
-&#x20;
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-**Constraints:**
-
-* `m == mat.length`
-* `n == mat[i].length`
-* `2 <= n, m <= 100`
-* `1 <= k <= m`
-* `matrix[i][j]` is either 0 or 1.
+<ul>
+	<li><code>m == mat.length</code></li>
+	<li><code>n == mat[i].length</code></li>
+	<li><code>2 &lt;= n, m &lt;= 100</code></li>
+	<li><code>1 &lt;= k &lt;= m</code></li>
+	<li><code>matrix[i][j]</code> is either 0 or 1.</li>
+</ul>
+</div>

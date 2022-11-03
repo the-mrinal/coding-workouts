@@ -1,35 +1,31 @@
-# Pow(x, n)
+<h2>  Pow(x, n)</h2><hr><div><p>Implement <a href="http://www.cplusplus.com/reference/valarray/pow/" target="_blank">pow(x, n)</a>, which calculates <code>x</code> raised to the power <code>n</code> (i.e., <code>x<sup>n</sup></code>).</p>
 
-***
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
 
-Implement [pow(x, n)](http://www.cplusplus.com/reference/valarray/pow/), which calculates `x` raised to the power `n` (i.e., `xn`).
+<pre><strong>Input:</strong> x = 2.00000, n = 10
+<strong>Output:</strong> 1024.00000
+</pre>
 
-&#x20;
+<p><strong>Example 2:</strong></p>
 
-**Example 1:**
+<pre><strong>Input:</strong> x = 2.10000, n = 3
+<strong>Output:</strong> 9.26100
+</pre>
 
-<pre><code>Input: x = 2.00000, n = 10
-<strong>Output:
-</strong> 1024.00000</code></pre>
+<p><strong>Example 3:</strong></p>
 
-**Example 2:**
+<pre><strong>Input:</strong> x = 2.00000, n = -2
+<strong>Output:</strong> 0.25000
+<strong>Explanation:</strong> 2<sup>-2</sup> = 1/2<sup>2</sup> = 1/4 = 0.25
+</pre>
 
-<pre><code>Input: x = 2.10000, n = 3
-<strong>Output:
-</strong> 9.26100</code></pre>
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-**Example 3:**
-
-<pre><code>Input: x = 2.00000, n = -2
-<strong>Output:
-</strong> 0.25000
-<strong>Explanation:
-</strong> 2-2 = 1/22 = 1/4 = 0.25</code></pre>
-
-&#x20;
-
-**Constraints:**
-
-* `-100.0 < x < 100.0`
-* `-231 <= n <= 231-1`
-* `-104 <= xn <= 104`
+<ul>
+	<li><code>-100.0 &lt; x &lt; 100.0</code></li>
+	<li><code>-2<sup>31</sup> &lt;= n &lt;= 2<sup>31</sup>-1</code></li>
+	<li><code>-10<sup>4</sup> &lt;= x<sup>n</sup> &lt;= 10<sup>4</sup></code></li>
+</ul>
+</div>

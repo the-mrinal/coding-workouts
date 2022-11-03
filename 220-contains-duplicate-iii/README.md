@@ -1,36 +1,23 @@
-# 220. Contains Duplicate III
+<h2><a href="https://leetcode.com/problems/contains-duplicate-iii/">220. Contains Duplicate III</a></h2><h3>Medium</h3><hr><div><p>Given an integer array <code>nums</code> and two integers <code>k</code> and <code>t</code>, return <code>true</code> if there are <strong>two distinct indices</strong> <code>i</code> and <code>j</code> in the array such that <code>abs(nums[i] - nums[j]) &lt;= t</code> and <code>abs(i - j) &lt;= k</code>.</p>
 
-## Medium
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
+<pre><strong>Input:</strong> nums = [1,2,3,1], k = 3, t = 0
+<strong>Output:</strong> true
+</pre><p><strong>Example 2:</strong></p>
+<pre><strong>Input:</strong> nums = [1,0,1,1], k = 1, t = 2
+<strong>Output:</strong> true
+</pre><p><strong>Example 3:</strong></p>
+<pre><strong>Input:</strong> nums = [1,5,9,1,5,9], k = 2, t = 3
+<strong>Output:</strong> false
+</pre>
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-***
-
-Given an integer array `nums` and two integers `k` and `t`, return `true` if there are **two distinct indices** `i` and `j` in the array such that `abs(nums[i] - nums[j]) <= t` and `abs(i - j) <= k`.
-
-&#x20;
-
-**Example 1:**
-
-<pre><code>Input: nums = [1,2,3,1], k = 3, t = 0
-<strong>Output:
-</strong> true</code></pre>
-
-**Example 2:**
-
-<pre><code>Input: nums = [1,0,1,1], k = 1, t = 2
-<strong>Output:
-</strong> true</code></pre>
-
-**Example 3:**
-
-<pre><code>Input: nums = [1,5,9,1,5,9], k = 2, t = 3
-<strong>Output:
-</strong> false</code></pre>
-
-&#x20;
-
-**Constraints:**
-
-* `1 <= nums.length <= 2 * 104`
-* `-231 <= nums[i] <= 231 - 1`
-* `0 <= k <= 104`
-* `0 <= t <= 231 - 1`
+<ul>
+	<li><code>1 &lt;= nums.length &lt;= 2 * 10<sup>4</sup></code></li>
+	<li><code>-2<sup>31</sup> &lt;= nums[i] &lt;= 2<sup>31</sup> - 1</code></li>
+	<li><code>0 &lt;= k &lt;= 10<sup>4</sup></code></li>
+	<li><code>0 &lt;= t &lt;= 2<sup>31</sup> - 1</code></li>
+</ul>
+</div>

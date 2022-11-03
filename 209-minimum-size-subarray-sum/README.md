@@ -1,41 +1,33 @@
-# 209. Minimum Size Subarray Sum
+<h2><a href="https://leetcode.com/problems/minimum-size-subarray-sum/">209. Minimum Size Subarray Sum</a></h2><h3>Medium</h3><hr><div><p>Given an array of positive integers <code>nums</code> and a positive integer <code>target</code>, return the minimal length of a <strong>contiguous subarray</strong> <code>[nums<sub>l</sub>, nums<sub>l+1</sub>, ..., nums<sub>r-1</sub>, nums<sub>r</sub>]</code> of which the sum is greater than or equal to <code>target</code>. If there is no such subarray, return <code>0</code> instead.</p>
 
-## Medium
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
 
-***
+<pre><strong>Input:</strong> target = 7, nums = [2,3,1,2,4,3]
+<strong>Output:</strong> 2
+<strong>Explanation:</strong> The subarray [4,3] has the minimal length under the problem constraint.
+</pre>
 
-Given an array of positive integers `nums` and a positive integer `target`, return the minimal length of a **contiguous subarray** `[numsl, numsl+1, ..., numsr-1, numsr]` of which the sum is greater than or equal to `target`. If there is no such subarray, return `0` instead.
+<p><strong>Example 2:</strong></p>
 
-&#x20;
+<pre><strong>Input:</strong> target = 4, nums = [1,4,4]
+<strong>Output:</strong> 1
+</pre>
 
-**Example 1:**
+<p><strong>Example 3:</strong></p>
 
-<pre><code>Input: target = 7, nums = [2,3,1,2,4,3]
-<strong>Output:
-</strong> 2
-<strong>Explanation:
-</strong> The subarray [4,3] has the minimal length under the problem constraint.</code></pre>
+<pre><strong>Input:</strong> target = 11, nums = [1,1,1,1,1,1,1,1]
+<strong>Output:</strong> 0
+</pre>
 
-**Example 2:**
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-<pre><code>Input: target = 4, nums = [1,4,4]
-<strong>Output:
-</strong> 1</code></pre>
+<ul>
+	<li><code>1 &lt;= target &lt;= 10<sup>9</sup></code></li>
+	<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>
+	<li><code>1 &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>
+</ul>
 
-**Example 3:**
-
-<pre><code>Input: target = 11, nums = [1,1,1,1,1,1,1,1]
-<strong>Output:
-</strong> 0</code></pre>
-
-&#x20;
-
-**Constraints:**
-
-* `1 <= target <= 109`
-* `1 <= nums.length <= 105`
-* `1 <= nums[i] <= 104`
-
-&#x20;
-
-**Follow up:** If you have figured out the `O(n)` solution, try coding another solution of which the time complexity is `O(n log(n))`.
+<p>&nbsp;</p>
+<strong>Follow up:</strong> If you have figured out the <code>O(n)</code> solution, try coding another solution of which the time complexity is <code>O(n log(n))</code>.</div>

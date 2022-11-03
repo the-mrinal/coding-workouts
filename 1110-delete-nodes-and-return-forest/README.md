@@ -1,36 +1,29 @@
-# 1110. Delete Nodes And Return Forest
+<h2><a href="https://leetcode.com/problems/delete-nodes-and-return-forest/">1110. Delete Nodes And Return Forest</a></h2><h3>Medium</h3><hr><div><p>Given the <code>root</code> of a binary tree, each node in the tree has a distinct value.</p>
 
-## Medium
+<p>After deleting all nodes with a value in <code>to_delete</code>, we are left with a forest (a disjoint union of trees).</p>
 
-***
+<p>Return the roots of the trees in the remaining forest. You may return the result in any order.</p>
 
-Given the `root` of a binary tree, each node in the tree has a distinct value.
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2019/07/01/screen-shot-2019-07-01-at-53836-pm.png" style="width: 237px; height: 150px;">
+<pre><strong>Input:</strong> root = [1,2,3,4,5,6,7], to_delete = [3,5]
+<strong>Output:</strong> [[1,2,null,4],[6],[7]]
+</pre>
 
-After deleting all nodes with a value in `to_delete`, we are left with a forest (a disjoint union of trees).
+<p><strong>Example 2:</strong></p>
 
-Return the roots of the trees in the remaining forest. You may return the result in any order.
+<pre><strong>Input:</strong> root = [1,2,4,null,3], to_delete = [3]
+<strong>Output:</strong> [[1,2,4]]
+</pre>
 
-&#x20;
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-**Example 1:**
-
-![](https://assets.leetcode.com/uploads/2019/07/01/screen-shot-2019-07-01-at-53836-pm.png)
-
-<pre><code>Input: root = [1,2,3,4,5,6,7], to_delete = [3,5]
-<strong>Output:
-</strong> [[1,2,null,4],[6],[7]]</code></pre>
-
-**Example 2:**
-
-<pre><code>Input: root = [1,2,4,null,3], to_delete = [3]
-<strong>Output:
-</strong> [[1,2,4]]</code></pre>
-
-&#x20;
-
-**Constraints:**
-
-* The number of nodes in the given tree is at most `1000`.
-* Each node has a distinct value between `1` and `1000`.
-* `to_delete.length <= 1000`
-* `to_delete` contains distinct values between `1` and `1000`.
+<ul>
+	<li>The number of nodes in the given tree is at most <code>1000</code>.</li>
+	<li>Each node has a distinct value between <code>1</code> and <code>1000</code>.</li>
+	<li><code>to_delete.length &lt;= 1000</code></li>
+	<li><code>to_delete</code> contains distinct values between <code>1</code> and <code>1000</code>.</li>
+</ul>
+</div>

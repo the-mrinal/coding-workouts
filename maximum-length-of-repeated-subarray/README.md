@@ -1,28 +1,24 @@
-# Maximum Length of Repeated Subarray
+<h2>  Maximum Length of Repeated Subarray</h2><hr><div><p>Given two integer arrays <code>nums1</code> and <code>nums2</code>, return <em>the maximum length of a subarray that appears in <strong>both</strong> arrays</em>.</p>
 
-***
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
 
-Given two integer arrays `nums1` and `nums2`, return _the maximum length of a subarray that appears in **both** arrays_.
+<pre><strong>Input:</strong> nums1 = [1,2,3,2,1], nums2 = [3,2,1,4,7]
+<strong>Output:</strong> 3
+<strong>Explanation:</strong> The repeated subarray with maximum length is [3,2,1].
+</pre>
 
-&#x20;
+<p><strong>Example 2:</strong></p>
 
-**Example 1:**
+<pre><strong>Input:</strong> nums1 = [0,0,0,0,0], nums2 = [0,0,0,0,0]
+<strong>Output:</strong> 5
+</pre>
 
-<pre><code>Input: nums1 = [1,2,3,2,1], nums2 = [3,2,1,4,7]
-<strong>Output:
-</strong> 3
-<strong>Explanation:
-</strong> The repeated subarray with maximum length is [3,2,1].</code></pre>
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-**Example 2:**
-
-<pre><code>Input: nums1 = [0,0,0,0,0], nums2 = [0,0,0,0,0]
-<strong>Output:
-</strong> 5</code></pre>
-
-&#x20;
-
-**Constraints:**
-
-* `1 <= nums1.length, nums2.length <= 1000`
-* `0 <= nums1[i], nums2[i] <= 100`
+<ul>
+	<li><code>1 &lt;= nums1.length, nums2.length &lt;= 1000</code></li>
+	<li><code>0 &lt;= nums1[i], nums2[i] &lt;= 100</code></li>
+</ul>
+</div>

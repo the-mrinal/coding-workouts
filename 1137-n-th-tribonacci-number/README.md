@@ -1,35 +1,29 @@
-# 1137. N-th Tribonacci Number
+<h2><a href="https://leetcode.com/problems/n-th-tribonacci-number/">1137. N-th Tribonacci Number</a></h2><h3>Easy</h3><hr><div><p>The Tribonacci sequence T<sub>n</sub> is defined as follows:&nbsp;</p>
 
-## Easy
+<p>T<sub>0</sub> = 0, T<sub>1</sub> = 1, T<sub>2</sub> = 1, and T<sub>n+3</sub> = T<sub>n</sub> + T<sub>n+1</sub> + T<sub>n+2</sub> for n &gt;= 0.</p>
 
-***
+<p>Given <code>n</code>, return the value of T<sub>n</sub>.</p>
 
-The Tribonacci sequence Tn is defined as follows:&#x20;
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
 
-T0 = 0, T1 = 1, T2 = 1, and Tn+3 = Tn + Tn+1 + Tn+2 for n >= 0.
+<pre><strong>Input:</strong> n = 4
+<strong>Output:</strong> 4
+<strong>Explanation:</strong>
+T_3 = 0 + 1 + 1 = 2
+T_4 = 1 + 1 + 2 = 4
+</pre>
 
-Given `n`, return the value of Tn.
+<p><strong>Example 2:</strong></p>
 
-&#x20;
+<pre><strong>Input:</strong> n = 25
+<strong>Output:</strong> 1389537
+</pre>
 
-**Example 1:**
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-<pre><code>Input: n = 4
-<strong>Output:
-</strong> 4
-<strong>Explanation:
-</strong>T_3 = 0 + 1 + 1 = 2
-T_4 = 1 + 1 + 2 = 4</code></pre>
-
-**Example 2:**
-
-<pre><code>Input: n = 25
-<strong>Output:
-</strong> 1389537</code></pre>
-
-&#x20;
-
-**Constraints:**
-
-* `0 <= n <= 37`
-* The answer is guaranteed to fit within a 32-bit integer, ie. `answer <= 2^31 - 1`.
+<ul>
+	<li><code>0 &lt;= n &lt;= 37</code></li>
+	<li>The answer is guaranteed to fit within a 32-bit integer, ie. <code>answer &lt;= 2^31 - 1</code>.</li>
+</ul></div>
