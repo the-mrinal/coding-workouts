@@ -1,37 +1,43 @@
-<h2><a href="https://leetcode.com/problems/delete-and-earn/">740. Delete and Earn</a></h2><h3>Medium</h3><hr><div><p>You are given an integer array <code>nums</code>. You want to maximize the number of points you get by performing the following operation any number of times:</p>
+# 740. Delete and Earn
 
-<ul>
-	<li>Pick any <code>nums[i]</code> and delete it to earn <code>nums[i]</code> points. Afterwards, you must delete <b>every</b> element equal to <code>nums[i] - 1</code> and <strong>every</strong> element equal to <code>nums[i] + 1</code>.</li>
-</ul>
+## Medium
 
-<p>Return <em>the <strong>maximum number of points</strong> you can earn by applying the above operation some number of times</em>.</p>
+***
 
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
+You are given an integer array `nums`. You want to maximize the number of points you get by performing the following operation any number of times:
 
-<pre><strong>Input:</strong> nums = [3,4,2]
-<strong>Output:</strong> 6
-<strong>Explanation:</strong> You can perform the following operations:
+* Pick any `nums[i]` and delete it to earn `nums[i]` points. Afterwards, you must delete **every** element equal to `nums[i] - 1` and **every** element equal to `nums[i] + 1`.
+
+Return _the **maximum number of points** you can earn by applying the above operation some number of times_.
+
+&#x20;
+
+**Example 1:**
+
+<pre><code>Input: nums = [3,4,2]
+<strong>Output:
+</strong> 6
+<strong>Explanation:
+</strong> You can perform the following operations:
 - Delete 4 to earn 4 points. Consequently, 3 is also deleted. nums = [2].
 - Delete 2 to earn 2 points. nums = [].
-You earn a total of 6 points.
-</pre>
+You earn a total of 6 points.</code></pre>
 
-<p><strong>Example 2:</strong></p>
+**Example 2:**
 
-<pre><strong>Input:</strong> nums = [2,2,3,3,3,4]
-<strong>Output:</strong> 9
-<strong>Explanation:</strong> You can perform the following operations:
+<pre><code>Input: nums = [2,2,3,3,3,4]
+<strong>Output:
+</strong> 9
+<strong>Explanation:
+</strong> You can perform the following operations:
 - Delete a 3 to earn 3 points. All 2's and 4's are also deleted. nums = [3,3].
 - Delete a 3 again to earn 3 points. nums = [3].
 - Delete a 3 once more to earn 3 points. nums = [].
-You earn a total of 9 points.</pre>
+You earn a total of 9 points.</code></pre>
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+&#x20;
 
-<ul>
-	<li><code>1 &lt;= nums.length &lt;= 2 * 10<sup>4</sup></code></li>
-	<li><code>1 &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>
-</ul>
-</div>
+**Constraints:**
+
+* `1 <= nums.length <= 2 * 104`
+* `1 <= nums[i] <= 104`

@@ -1,45 +1,52 @@
-<h2><a href="https://leetcode.com/problems/smallest-string-with-swaps/">1202. Smallest String With Swaps</a></h2><h3>Medium</h3><hr><div><p>You are given a string <code>s</code>, and an array of pairs of indices in the string&nbsp;<code>pairs</code>&nbsp;where&nbsp;<code>pairs[i] =&nbsp;[a, b]</code>&nbsp;indicates 2 indices(0-indexed) of the string.</p>
+# 1202. Smallest String With Swaps
 
-<p>You can&nbsp;swap the characters at any pair of indices in the given&nbsp;<code>pairs</code>&nbsp;<strong>any number of times</strong>.</p>
+## Medium
 
-<p>Return the&nbsp;lexicographically smallest string that <code>s</code>&nbsp;can be changed to after using the swaps.</p>
+***
 
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
+You are given a string `s`, and an array of pairs of indices in the string `pairs` where `pairs[i] = [a, b]` indicates 2 indices(0-indexed) of the string.
 
-<pre><strong>Input:</strong> s = "dcab", pairs = [[0,3],[1,2]]
-<strong>Output:</strong> "bacd"
-<strong>Explaination:</strong> 
+You can swap the characters at any pair of indices in the given `pairs` **any number of times**.
+
+Return the lexicographically smallest string that `s` can be changed to after using the swaps.
+
+&#x20;
+
+**Example 1:**
+
+<pre><code>Input: s = "dcab", pairs = [[0,3],[1,2]]
+<strong>Output:
+</strong> "bacd"
+<strong>Explaination:
+</strong> 
 Swap s[0] and s[3], s = "bcad"
-Swap s[1] and s[2], s = "bacd"
-</pre>
+Swap s[1] and s[2], s = "bacd"</code></pre>
 
-<p><strong>Example 2:</strong></p>
+**Example 2:**
 
-<pre><strong>Input:</strong> s = "dcab", pairs = [[0,3],[1,2],[0,2]]
-<strong>Output:</strong> "abcd"
-<strong>Explaination: </strong>
-Swap s[0] and s[3], s = "bcad"
+<pre><code>Input: s = "dcab", pairs = [[0,3],[1,2],[0,2]]
+<strong>Output:
+</strong> "abcd"
+<strong>Explaination: 
+</strong>Swap s[0] and s[3], s = "bcad"
 Swap s[0] and s[2], s = "acbd"
-Swap s[1] and s[2], s = "abcd"</pre>
+Swap s[1] and s[2], s = "abcd"</code></pre>
 
-<p><strong>Example 3:</strong></p>
+**Example 3:**
 
-<pre><strong>Input:</strong> s = "cba", pairs = [[0,1],[1,2]]
-<strong>Output:</strong> "abc"
-<strong>Explaination: </strong>
-Swap s[0] and s[1], s = "bca"
+<pre><code>Input: s = "cba", pairs = [[0,1],[1,2]]
+<strong>Output:
+</strong> "abc"
+<strong>Explaination: 
+</strong>Swap s[0] and s[1], s = "bca"
 Swap s[1] and s[2], s = "bac"
-Swap s[0] and s[1], s = "abc"
-</pre>
+Swap s[0] and s[1], s = "abc"</code></pre>
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+&#x20;
 
-<ul>
-	<li><code>1 &lt;= s.length &lt;= 10^5</code></li>
-	<li><code>0 &lt;= pairs.length &lt;= 10^5</code></li>
-	<li><code>0 &lt;= pairs[i][0], pairs[i][1] &lt;&nbsp;s.length</code></li>
-	<li><code>s</code>&nbsp;only contains lower case English letters.</li>
-</ul>
-</div>
+**Constraints:**
+
+* `1 <= s.length <= 10^5`
+* `0 <= pairs.length <= 10^5`
+* `0 <= pairs[i][0], pairs[i][1] < s.length`
+* `s` only contains lower case English letters.

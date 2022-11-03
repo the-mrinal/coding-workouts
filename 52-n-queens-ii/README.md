@@ -1,25 +1,33 @@
-<h2><a href="https://leetcode.com/problems/n-queens-ii/">52. N-Queens II</a></h2><h3>Hard</h3><hr><div><p>The <strong>n-queens</strong> puzzle is the problem of placing <code>n</code> queens on an <code>n x n</code> chessboard such that no two queens attack each other.</p>
+# 52. N-Queens II
 
-<p>Given an integer <code>n</code>, return <em>the number of distinct solutions to the&nbsp;<strong>n-queens puzzle</strong></em>.</p>
+## Hard
 
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2020/11/13/queens.jpg" style="width: 600px; height: 268px;">
-<pre><strong>Input:</strong> n = 4
-<strong>Output:</strong> 2
-<strong>Explanation:</strong> There are two distinct solutions to the 4-queens puzzle as shown.
-</pre>
+***
 
-<p><strong>Example 2:</strong></p>
+The **n-queens** puzzle is the problem of placing `n` queens on an `n x n` chessboard such that no two queens attack each other.
 
-<pre><strong>Input:</strong> n = 1
-<strong>Output:</strong> 1
-</pre>
+Given an integer `n`, return _the number of distinct solutions to the **n-queens puzzle**_.
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+&#x20;
 
-<ul>
-	<li><code>1 &lt;= n &lt;= 9</code></li>
-</ul>
-</div>
+**Example 1:**
+
+![](https://assets.leetcode.com/uploads/2020/11/13/queens.jpg)
+
+<pre><code>Input: n = 4
+<strong>Output:
+</strong> 2
+<strong>Explanation:
+</strong> There are two distinct solutions to the 4-queens puzzle as shown.</code></pre>
+
+**Example 2:**
+
+<pre><code>Input: n = 1
+<strong>Output:
+</strong> 1</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `1 <= n <= 9`

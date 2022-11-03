@@ -1,29 +1,35 @@
-<h2><a href="https://leetcode.com/problems/3sum-closest/">16. 3Sum Closest</a></h2><h3>Medium</h3><hr><div><p>Given an integer array <code>nums</code> of length <code>n</code> and an integer <code>target</code>, find three integers in <code>nums</code> such that the sum is closest to <code>target</code>.</p>
+# 16. 3Sum Closest
 
-<p>Return <em>the sum of the three integers</em>.</p>
+## Medium
 
-<p>You may assume that each input would have exactly one solution.</p>
+***
 
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
+Given an integer array `nums` of length `n` and an integer `target`, find three integers in `nums` such that the sum is closest to `target`.
 
-<pre><strong>Input:</strong> nums = [-1,2,1,-4], target = 1
-<strong>Output:</strong> 2
-<strong>Explanation:</strong> The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
-</pre>
+Return _the sum of the three integers_.
 
-<p><strong>Example 2:</strong></p>
+You may assume that each input would have exactly one solution.
 
-<pre><strong>Input:</strong> nums = [0,0,0], target = 1
-<strong>Output:</strong> 0
-</pre>
+&#x20;
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+**Example 1:**
 
-<ul>
-	<li><code>3 &lt;= nums.length &lt;= 1000</code></li>
-	<li><code>-1000 &lt;= nums[i] &lt;= 1000</code></li>
-	<li><code>-10<sup>4</sup> &lt;= target &lt;= 10<sup>4</sup></code></li>
-</ul>
-</div>
+<pre><code>Input: nums = [-1,2,1,-4], target = 1
+<strong>Output:
+</strong> 2
+<strong>Explanation:
+</strong> The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).</code></pre>
+
+**Example 2:**
+
+<pre><code>Input: nums = [0,0,0], target = 1
+<strong>Output:
+</strong> 0</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `3 <= nums.length <= 1000`
+* `-1000 <= nums[i] <= 1000`
+* `-104 <= target <= 104`

@@ -1,26 +1,32 @@
-<h2><a href="https://leetcode.com/problems/delete-operation-for-two-strings/">583. Delete Operation for Two Strings</a></h2><h3>Medium</h3><hr><div><p>Given two strings <code>word1</code> and <code>word2</code>, return <em>the minimum number of <strong>steps</strong> required to make</em> <code>word1</code> <em>and</em> <code>word2</code> <em>the same</em>.</p>
+# 583. Delete Operation for Two Strings
 
-<p>In one <strong>step</strong>, you can delete exactly one character in either string.</p>
+## Medium
 
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
+***
 
-<pre><strong>Input:</strong> word1 = "sea", word2 = "eat"
-<strong>Output:</strong> 2
-<strong>Explanation:</strong> You need one step to make "sea" to "ea" and another step to make "eat" to "ea".
-</pre>
+Given two strings `word1` and `word2`, return _the minimum number of **steps** required to make_ `word1` _and_ `word2` _the same_.
 
-<p><strong>Example 2:</strong></p>
+In one **step**, you can delete exactly one character in either string.
 
-<pre><strong>Input:</strong> word1 = "leetcode", word2 = "etco"
-<strong>Output:</strong> 4
-</pre>
+&#x20;
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+**Example 1:**
 
-<ul>
-	<li><code>1 &lt;= word1.length, word2.length &lt;= 500</code></li>
-	<li><code>word1</code> and <code>word2</code> consist of only lowercase English letters.</li>
-</ul>
-</div>
+<pre><code>Input: word1 = "sea", word2 = "eat"
+<strong>Output:
+</strong> 2
+<strong>Explanation:
+</strong> You need one step to make "sea" to "ea" and another step to make "eat" to "ea".</code></pre>
+
+**Example 2:**
+
+<pre><code>Input: word1 = "leetcode", word2 = "etco"
+<strong>Output:
+</strong> 4</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `1 <= word1.length, word2.length <= 500`
+* `word1` and `word2` consist of only lowercase English letters.

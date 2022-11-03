@@ -1,35 +1,42 @@
-<h2><a href="https://leetcode.com/problems/maximum-subarray/">53. Maximum Subarray</a></h2><h3>Medium</h3><hr><div><p>Given an integer array <code>nums</code>, find the contiguous subarray (containing at least one number) which has the largest sum and return <em>its sum</em>.</p>
+# 53. Maximum Subarray
 
-<p>A <strong>subarray</strong> is a <strong>contiguous</strong> part of an array.</p>
+## Medium
 
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
+***
 
-<pre><strong>Input:</strong> nums = [-2,1,-3,4,-1,2,1,-5,4]
-<strong>Output:</strong> 6
-<strong>Explanation:</strong> [4,-1,2,1] has the largest sum = 6.
-</pre>
+Given an integer array `nums`, find the contiguous subarray (containing at least one number) which has the largest sum and return _its sum_.
 
-<p><strong>Example 2:</strong></p>
+A **subarray** is a **contiguous** part of an array.
 
-<pre><strong>Input:</strong> nums = [1]
-<strong>Output:</strong> 1
-</pre>
+&#x20;
 
-<p><strong>Example 3:</strong></p>
+**Example 1:**
 
-<pre><strong>Input:</strong> nums = [5,4,-1,7,8]
-<strong>Output:</strong> 23
-</pre>
+<pre><code>Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
+<strong>Output:
+</strong> 6
+<strong>Explanation:
+</strong> [4,-1,2,1] has the largest sum = 6.</code></pre>
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+**Example 2:**
 
-<ul>
-	<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>
-	<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>
-</ul>
+<pre><code>Input: nums = [1]
+<strong>Output:
+</strong> 1</code></pre>
 
-<p>&nbsp;</p>
-<p><strong>Follow up:</strong> If you have figured out the <code>O(n)</code> solution, try coding another solution using the <strong>divide and conquer</strong> approach, which is more subtle.</p>
-</div>
+**Example 3:**
+
+<pre><code>Input: nums = [5,4,-1,7,8]
+<strong>Output:
+</strong> 23</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `1 <= nums.length <= 105`
+* `-104 <= nums[i] <= 104`
+
+&#x20;
+
+**Follow up:** If you have figured out the `O(n)` solution, try coding another solution using the **divide and conquer** approach, which is more subtle.

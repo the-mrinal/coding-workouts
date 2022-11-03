@@ -1,63 +1,79 @@
-<h2><a href="https://leetcode.com/problems/intersection-of-two-linked-lists/">160. Intersection of Two Linked Lists</a></h2><h3>Easy</h3><hr><div><p>Given the heads of two singly linked-lists <code>headA</code> and <code>headB</code>, return <em>the node at which the two lists intersect</em>. If the two linked lists have no intersection at all, return <code>null</code>.</p>
+# 160. Intersection of Two Linked Lists
 
-<p>For example, the following two linked lists begin to intersect at node <code>c1</code>:</p>
-<img alt="" src="https://assets.leetcode.com/uploads/2021/03/05/160_statement.png" style="width: 500px; height: 162px;">
-<p>The test cases are generated such that there are no cycles anywhere in the entire linked structure.</p>
+## Easy
 
-<p><strong>Note</strong> that the linked lists must <strong>retain their original structure</strong> after the function returns.</p>
+***
 
-<p><strong>Custom Judge:</strong></p>
+Given the heads of two singly linked-lists `headA` and `headB`, return _the node at which the two lists intersect_. If the two linked lists have no intersection at all, return `null`.
 
-<p>The inputs to the <strong>judge</strong> are given as follows (your program is <strong>not</strong> given these inputs):</p>
+For example, the following two linked lists begin to intersect at node `c1`:
 
-<ul>
-	<li><code>intersectVal</code> - The value of the node where the intersection occurs. This is <code>0</code> if there is no intersected node.</li>
-	<li><code>listA</code> - The first linked list.</li>
-	<li><code>listB</code> - The second linked list.</li>
-	<li><code>skipA</code> - The number of nodes to skip ahead in <code>listA</code> (starting from the head) to get to the intersected node.</li>
-	<li><code>skipB</code> - The number of nodes to skip ahead in <code>listB</code> (starting from the head) to get to the intersected node.</li>
-</ul>
+![](https://assets.leetcode.com/uploads/2021/03/05/160\_statement.png)
 
-<p>The judge will then create the linked structure based on these inputs and pass the two heads, <code>headA</code> and <code>headB</code>&nbsp;to your program. If you correctly return the intersected node, then your solution will be <strong>accepted</strong>.</p>
+The test cases are generated such that there are no cycles anywhere in the entire linked structure.
 
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2021/03/05/160_example_1_1.png" style="width: 500px; height: 162px;">
-<pre><strong>Input:</strong> intersectVal = 8, listA = [4,1,8,4,5], listB = [5,6,1,8,4,5], skipA = 2, skipB = 3
-<strong>Output:</strong> Intersected at '8'
-<strong>Explanation:</strong> The intersected node's value is 8 (note that this must not be 0 if the two lists intersect).
-From the head of A, it reads as [4,1,8,4,5]. From the head of B, it reads as [5,6,1,8,4,5]. There are 2 nodes before the intersected node in A; There are 3 nodes before the intersected node in B.
-</pre>
+**Note** that the linked lists must **retain their original structure** after the function returns.
 
-<p><strong>Example 2:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2021/03/05/160_example_2.png" style="width: 500px; height: 194px;">
-<pre><strong>Input:</strong> intersectVal = 2, listA = [1,9,1,2,4], listB = [3,2,4], skipA = 3, skipB = 1
-<strong>Output:</strong> Intersected at '2'
-<strong>Explanation:</strong> The intersected node's value is 2 (note that this must not be 0 if the two lists intersect).
-From the head of A, it reads as [1,9,1,2,4]. From the head of B, it reads as [3,2,4]. There are 3 nodes before the intersected node in A; There are 1 node before the intersected node in B.
-</pre>
+**Custom Judge:**
 
-<p><strong>Example 3:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2021/03/05/160_example_3.png" style="width: 300px; height: 189px;">
-<pre><strong>Input:</strong> intersectVal = 0, listA = [2,6,4], listB = [1,5], skipA = 3, skipB = 2
-<strong>Output:</strong> No intersection
-<strong>Explanation:</strong> From the head of A, it reads as [2,6,4]. From the head of B, it reads as [1,5]. Since the two lists do not intersect, intersectVal must be 0, while skipA and skipB can be arbitrary values.
-Explanation: The two lists do not intersect, so return null.
-</pre>
+The inputs to the **judge** are given as follows (your program is **not** given these inputs):
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+* `intersectVal` - The value of the node where the intersection occurs. This is `0` if there is no intersected node.
+* `listA` - The first linked list.
+* `listB` - The second linked list.
+* `skipA` - The number of nodes to skip ahead in `listA` (starting from the head) to get to the intersected node.
+* `skipB` - The number of nodes to skip ahead in `listB` (starting from the head) to get to the intersected node.
 
-<ul>
-	<li>The number of nodes of <code>listA</code> is in the <code>m</code>.</li>
-	<li>The number of nodes of <code>listB</code> is in the <code>n</code>.</li>
-	<li><code>1 &lt;= m, n &lt;= 3 * 10<sup>4</sup></code></li>
-	<li><code>1 &lt;= Node.val &lt;= 10<sup>5</sup></code></li>
-	<li><code>0 &lt;= skipA &lt;&nbsp;m</code></li>
-	<li><code>0 &lt;= skipB &lt;&nbsp;n</code></li>
-	<li><code>intersectVal</code> is <code>0</code> if <code>listA</code> and <code>listB</code> do not intersect.</li>
-	<li><code>intersectVal == listA[skipA] == listB[skipB]</code> if <code>listA</code> and <code>listB</code> intersect.</li>
-</ul>
+The judge will then create the linked structure based on these inputs and pass the two heads, `headA` and `headB` to your program. If you correctly return the intersected node, then your solution will be **accepted**.
 
-<p>&nbsp;</p>
-<strong>Follow up:</strong> Could you write a solution that runs in <code>O(m + n)</code> time and use only <code>O(1)</code> memory?</div>
+&#x20;
+
+**Example 1:**
+
+![](https://assets.leetcode.com/uploads/2021/03/05/160\_example\_1\_1.png)
+
+<pre><code>Input: intersectVal = 8, listA = [4,1,8,4,5], listB = [5,6,1,8,4,5], skipA = 2, skipB = 3
+<strong>Output:
+</strong> Intersected at '8'
+<strong>Explanation:
+</strong> The intersected node's value is 8 (note that this must not be 0 if the two lists intersect).
+From the head of A, it reads as [4,1,8,4,5]. From the head of B, it reads as [5,6,1,8,4,5]. There are 2 nodes before the intersected node in A; There are 3 nodes before the intersected node in B.</code></pre>
+
+**Example 2:**
+
+![](https://assets.leetcode.com/uploads/2021/03/05/160\_example\_2.png)
+
+<pre><code>Input: intersectVal = 2, listA = [1,9,1,2,4], listB = [3,2,4], skipA = 3, skipB = 1
+<strong>Output:
+</strong> Intersected at '2'
+<strong>Explanation:
+</strong> The intersected node's value is 2 (note that this must not be 0 if the two lists intersect).
+From the head of A, it reads as [1,9,1,2,4]. From the head of B, it reads as [3,2,4]. There are 3 nodes before the intersected node in A; There are 1 node before the intersected node in B.</code></pre>
+
+**Example 3:**
+
+![](https://assets.leetcode.com/uploads/2021/03/05/160\_example\_3.png)
+
+<pre><code>Input: intersectVal = 0, listA = [2,6,4], listB = [1,5], skipA = 3, skipB = 2
+<strong>Output:
+</strong> No intersection
+<strong>Explanation:
+</strong> From the head of A, it reads as [2,6,4]. From the head of B, it reads as [1,5]. Since the two lists do not intersect, intersectVal must be 0, while skipA and skipB can be arbitrary values.
+Explanation: The two lists do not intersect, so return null.</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* The number of nodes of `listA` is in the `m`.
+* The number of nodes of `listB` is in the `n`.
+* `1 <= m, n <= 3 * 104`
+* `1 <= Node.val <= 105`
+* `0 <= skipA < m`
+* `0 <= skipB < n`
+* `intersectVal` is `0` if `listA` and `listB` do not intersect.
+* `intersectVal == listA[skipA] == listB[skipB]` if `listA` and `listB` intersect.
+
+&#x20;
+
+**Follow up:** Could you write a solution that runs in `O(m + n)` time and use only `O(1)` memory?

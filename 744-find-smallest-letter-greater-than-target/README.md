@@ -1,38 +1,41 @@
-<h2><a href="https://leetcode.com/problems/find-smallest-letter-greater-than-target/">744. Find Smallest Letter Greater Than Target</a></h2><h3>Easy</h3><hr><div><p>Given a characters array <code>letters</code> that is sorted in <strong>non-decreasing</strong> order and a character <code>target</code>, return <em>the smallest character in the array that is larger than </em><code>target</code>.</p>
+# 744. Find Smallest Letter Greater Than Target
 
-<p><strong>Note</strong> that the letters wrap around.</p>
+## Easy
 
-<ul>
-	<li>For example, if <code>target == 'z'</code> and <code>letters == ['a', 'b']</code>, the answer is <code>'a'</code>.</li>
-</ul>
+***
 
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
+Given a characters array `letters` that is sorted in **non-decreasing** order and a character `target`, return _the smallest character in the array that is larger than_ `target`.
 
-<pre><strong>Input:</strong> letters = ["c","f","j"], target = "a"
-<strong>Output:</strong> "c"
-</pre>
+**Note** that the letters wrap around.
 
-<p><strong>Example 2:</strong></p>
+* For example, if `target == 'z'` and `letters == ['a', 'b']`, the answer is `'a'`.
 
-<pre><strong>Input:</strong> letters = ["c","f","j"], target = "c"
-<strong>Output:</strong> "f"
-</pre>
+&#x20;
 
-<p><strong>Example 3:</strong></p>
+**Example 1:**
 
-<pre><strong>Input:</strong> letters = ["c","f","j"], target = "d"
-<strong>Output:</strong> "f"
-</pre>
+<pre><code>Input: letters = ["c","f","j"], target = "a"
+<strong>Output:
+</strong> "c"</code></pre>
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+**Example 2:**
 
-<ul>
-	<li><code>2 &lt;= letters.length &lt;= 10<sup>4</sup></code></li>
-	<li><code>letters[i]</code> is a lowercase English letter.</li>
-	<li><code>letters</code> is sorted in <strong>non-decreasing</strong> order.</li>
-	<li><code>letters</code> contains at least two different characters.</li>
-	<li><code>target</code> is a lowercase English letter.</li>
-</ul>
-</div>
+<pre><code>Input: letters = ["c","f","j"], target = "c"
+<strong>Output:
+</strong> "f"</code></pre>
+
+**Example 3:**
+
+<pre><code>Input: letters = ["c","f","j"], target = "d"
+<strong>Output:
+</strong> "f"</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `2 <= letters.length <= 104`
+* `letters[i]` is a lowercase English letter.
+* `letters` is sorted in **non-decreasing** order.
+* `letters` contains at least two different characters.
+* `target` is a lowercase English letter.

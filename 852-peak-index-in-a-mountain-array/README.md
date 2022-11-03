@@ -1,44 +1,46 @@
-<h2><a href="https://leetcode.com/problems/peak-index-in-a-mountain-array/">852. Peak Index in a Mountain Array</a></h2><h3>Easy</h3><hr><div><p>Let's call an array <code>arr</code> a <strong>mountain</strong>&nbsp;if the following properties hold:</p>
+# 852. Peak Index in a Mountain Array
 
-<ul>
-	<li><code>arr.length &gt;= 3</code></li>
-	<li>There exists some <code>i</code> with&nbsp;<code>0 &lt; i&nbsp;&lt; arr.length - 1</code>&nbsp;such that:
-	<ul>
-		<li><code>arr[0] &lt; arr[1] &lt; ... arr[i-1] &lt; arr[i] </code></li>
-		<li><code>arr[i] &gt; arr[i+1] &gt; ... &gt; arr[arr.length - 1]</code></li>
-	</ul>
-	</li>
-</ul>
+## Easy
 
-<p>Given an integer array <code>arr</code> that is <strong>guaranteed</strong> to be&nbsp;a mountain, return any&nbsp;<code>i</code>&nbsp;such that&nbsp;<code>arr[0] &lt; arr[1] &lt; ... arr[i - 1] &lt; arr[i] &gt; arr[i + 1] &gt; ... &gt; arr[arr.length - 1]</code>.</p>
+***
 
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
+Let's call an array `arr` a **mountain** if the following properties hold:
 
-<pre><strong>Input:</strong> arr = [0,1,0]
-<strong>Output:</strong> 1
-</pre>
+* `arr.length >= 3`
+* There exists some `i` with `0 < i < arr.length - 1` such that:
+  * `arr[0] < arr[1] < ... arr[i-1] < arr[i]`
+  * `arr[i] > arr[i+1] > ... > arr[arr.length - 1]`
 
-<p><strong>Example 2:</strong></p>
+Given an integer array `arr` that is **guaranteed** to be a mountain, return any `i` such that `arr[0] < arr[1] < ... arr[i - 1] < arr[i] > arr[i + 1] > ... > arr[arr.length - 1]`.
 
-<pre><strong>Input:</strong> arr = [0,2,1,0]
-<strong>Output:</strong> 1
-</pre>
+&#x20;
 
-<p><strong>Example 3:</strong></p>
+**Example 1:**
 
-<pre><strong>Input:</strong> arr = [0,10,5,2]
-<strong>Output:</strong> 1
-</pre>
+<pre><code>Input: arr = [0,1,0]
+<strong>Output:
+</strong> 1</code></pre>
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+**Example 2:**
 
-<ul>
-	<li><code>3 &lt;= arr.length &lt;= 10<sup>4</sup></code></li>
-	<li><code>0 &lt;= arr[i] &lt;= 10<sup>6</sup></code></li>
-	<li><code>arr</code> is <strong>guaranteed</strong> to be a mountain array.</li>
-</ul>
+<pre><code>Input: arr = [0,2,1,0]
+<strong>Output:
+</strong> 1</code></pre>
 
-<p>&nbsp;</p>
-<strong>Follow up:</strong> Finding the <code>O(n)</code> is straightforward, could you find an <code>O(log(n))</code> solution?</div>
+**Example 3:**
+
+<pre><code>Input: arr = [0,10,5,2]
+<strong>Output:
+</strong> 1</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `3 <= arr.length <= 104`
+* `0 <= arr[i] <= 106`
+* `arr` is **guaranteed** to be a mountain array.
+
+&#x20;
+
+**Follow up:** Finding the `O(n)` is straightforward, could you find an `O(log(n))` solution?

@@ -1,34 +1,42 @@
-<h2><a href="https://leetcode.com/problems/kth-missing-positive-number/">1539. Kth Missing Positive Number</a></h2><h3>Easy</h3><hr><div><p>Given an array <code>arr</code> of positive integers sorted in a <strong>strictly increasing order</strong>, and an integer <code>k</code>.</p>
+# 1539. Kth Missing Positive Number
 
-<p>Return <em>the</em> <code>k<sup>th</sup></code> <em><strong>positive</strong> integer that is <strong>missing</strong> from this array.</em></p>
+## Easy
 
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
+***
 
-<pre><strong>Input:</strong> arr = [2,3,4,7,11], k = 5
-<strong>Output:</strong> 9
-<strong>Explanation: </strong>The missing positive integers are [1,5,6,8,9,10,12,13,...]. The 5<sup>th</sup>&nbsp;missing positive integer is 9.
-</pre>
+Given an array `arr` of positive integers sorted in a **strictly increasing order**, and an integer `k`.
 
-<p><strong>Example 2:</strong></p>
+Return _the_ `kth` _**positive** integer that is **missing** from this array._
 
-<pre><strong>Input:</strong> arr = [1,2,3,4], k = 2
-<strong>Output:</strong> 6
-<strong>Explanation: </strong>The missing positive integers are [5,6,7,...]. The 2<sup>nd</sup> missing positive integer is 6.
-</pre>
+&#x20;
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+**Example 1:**
 
-<ul>
-	<li><code>1 &lt;= arr.length &lt;= 1000</code></li>
-	<li><code>1 &lt;= arr[i] &lt;= 1000</code></li>
-	<li><code>1 &lt;= k &lt;= 1000</code></li>
-	<li><code>arr[i] &lt; arr[j]</code> for <code>1 &lt;= i &lt; j &lt;= arr.length</code></li>
-</ul>
+<pre><code>Input: arr = [2,3,4,7,11], k = 5
+<strong>Output:
+</strong> 9
+<strong>Explanation: 
+</strong>The missing positive integers are [1,5,6,8,9,10,12,13,...]. The 5th missing positive integer is 9.</code></pre>
 
-<p>&nbsp;</p>
-<p><strong>Follow up:</strong></p>
+**Example 2:**
 
-<p>Could you solve this problem in less than O(n) complexity?</p>
-</div>
+<pre><code>Input: arr = [1,2,3,4], k = 2
+<strong>Output:
+</strong> 6
+<strong>Explanation: 
+</strong>The missing positive integers are [5,6,7,...]. The 2nd missing positive integer is 6.</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `1 <= arr.length <= 1000`
+* `1 <= arr[i] <= 1000`
+* `1 <= k <= 1000`
+* `arr[i] < arr[j]` for `1 <= i < j <= arr.length`
+
+&#x20;
+
+**Follow up:**
+
+Could you solve this problem in less than O(n) complexity?

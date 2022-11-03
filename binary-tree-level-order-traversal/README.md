@@ -1,29 +1,34 @@
-<h2>  Binary Tree Level Order Traversal</h2><hr><div><p>Given the <code>root</code> of a binary tree, return <em>the level order traversal of its nodes' values</em>. (i.e., from left to right, level by level).</p>
+# Binary Tree Level Order Traversal
 
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2021/02/19/tree1.jpg" style="width: 277px; height: 302px;">
-<pre><strong>Input:</strong> root = [3,9,20,null,null,15,7]
-<strong>Output:</strong> [[3],[9,20],[15,7]]
-</pre>
+***
 
-<p><strong>Example 2:</strong></p>
+Given the `root` of a binary tree, return _the level order traversal of its nodes' values_. (i.e., from left to right, level by level).
 
-<pre><strong>Input:</strong> root = [1]
-<strong>Output:</strong> [[1]]
-</pre>
+&#x20;
 
-<p><strong>Example 3:</strong></p>
+**Example 1:**
 
-<pre><strong>Input:</strong> root = []
-<strong>Output:</strong> []
-</pre>
+![](https://assets.leetcode.com/uploads/2021/02/19/tree1.jpg)
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+<pre><code>Input: root = [3,9,20,null,null,15,7]
+<strong>Output:
+</strong> [[3],[9,20],[15,7]]</code></pre>
 
-<ul>
-	<li>The number of nodes in the tree is in the range <code>[0, 2000]</code>.</li>
-	<li><code>-1000 &lt;= Node.val &lt;= 1000</code></li>
-</ul>
-</div>
+**Example 2:**
+
+<pre><code>Input: root = [1]
+<strong>Output:
+</strong> [[1]]</code></pre>
+
+**Example 3:**
+
+<pre><code>Input: root = []
+<strong>Output:
+</strong> []</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* The number of nodes in the tree is in the range `[0, 2000]`.
+* `-1000 <= Node.val <= 1000`

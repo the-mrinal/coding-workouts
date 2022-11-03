@@ -1,36 +1,42 @@
-<h2><a href="https://leetcode.com/problems/substring-with-concatenation-of-all-words/">30. Substring with Concatenation of All Words</a></h2><h3>Hard</h3><hr><div><p>You are given a string <code>s</code> and an array of strings <code>words</code> of <strong>the same length</strong>. Return&nbsp;all starting indices of substring(s) in <code>s</code>&nbsp;that is a concatenation of each word in <code>words</code> <strong>exactly once</strong>, <strong>in any order</strong>,&nbsp;and <strong>without any intervening characters</strong>.</p>
+# 30. Substring with Concatenation of All Words
 
-<p>You can return the answer in <strong>any order</strong>.</p>
+## Hard
 
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
+***
 
-<pre><strong>Input:</strong> s = "barfoothefoobarman", words = ["foo","bar"]
-<strong>Output:</strong> [0,9]
-<strong>Explanation:</strong> Substrings starting at index 0 and 9 are "barfoo" and "foobar" respectively.
-The output order does not matter, returning [9,0] is fine too.
-</pre>
+You are given a string `s` and an array of strings `words` of **the same length**. Return all starting indices of substring(s) in `s` that is a concatenation of each word in `words` **exactly once**, **in any order**, and **without any intervening characters**.
 
-<p><strong>Example 2:</strong></p>
+You can return the answer in **any order**.
 
-<pre><strong>Input:</strong> s = "wordgoodgoodgoodbestword", words = ["word","good","best","word"]
-<strong>Output:</strong> []
-</pre>
+&#x20;
 
-<p><strong>Example 3:</strong></p>
+**Example 1:**
 
-<pre><strong>Input:</strong> s = "barfoofoobarthefoobarman", words = ["bar","foo","the"]
-<strong>Output:</strong> [6,9,12]
-</pre>
+<pre><code>Input: s = "barfoothefoobarman", words = ["foo","bar"]
+<strong>Output:
+</strong> [0,9]
+<strong>Explanation:
+</strong> Substrings starting at index 0 and 9 are "barfoo" and "foobar" respectively.
+The output order does not matter, returning [9,0] is fine too.</code></pre>
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+**Example 2:**
 
-<ul>
-	<li><code>1 &lt;= s.length &lt;= 10<sup>4</sup></code></li>
-	<li><code>s</code> consists of lower-case English letters.</li>
-	<li><code>1 &lt;= words.length &lt;= 5000</code></li>
-	<li><code>1 &lt;= words[i].length &lt;= 30</code></li>
-	<li><code>words[i]</code>&nbsp;consists of lower-case English letters.</li>
-</ul>
-</div>
+<pre><code>Input: s = "wordgoodgoodgoodbestword", words = ["word","good","best","word"]
+<strong>Output:
+</strong> []</code></pre>
+
+**Example 3:**
+
+<pre><code>Input: s = "barfoofoobarthefoobarman", words = ["bar","foo","the"]
+<strong>Output:
+</strong> [6,9,12]</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `1 <= s.length <= 104`
+* `s` consists of lower-case English letters.
+* `1 <= words.length <= 5000`
+* `1 <= words[i].length <= 30`
+* `words[i]` consists of lower-case English letters.

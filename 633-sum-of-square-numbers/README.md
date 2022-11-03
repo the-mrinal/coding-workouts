@@ -1,23 +1,29 @@
-<h2><a href="https://leetcode.com/problems/sum-of-square-numbers/">633. Sum of Square Numbers</a></h2><h3>Medium</h3><hr><div><p>Given a non-negative integer <code>c</code>, decide whether there're two integers <code>a</code> and <code>b</code> such that <code>a<sup>2</sup> + b<sup>2</sup> = c</code>.</p>
+# 633. Sum of Square Numbers
 
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
+## Medium
 
-<pre><strong>Input:</strong> c = 5
-<strong>Output:</strong> true
-<strong>Explanation:</strong> 1 * 1 + 2 * 2 = 5
-</pre>
+***
 
-<p><strong>Example 2:</strong></p>
+Given a non-negative integer `c`, decide whether there're two integers `a` and `b` such that `a2 + b2 = c`.
 
-<pre><strong>Input:</strong> c = 3
-<strong>Output:</strong> false
-</pre>
+&#x20;
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+**Example 1:**
 
-<ul>
-	<li><code>0 &lt;= c &lt;= 2<sup>31</sup> - 1</code></li>
-</ul>
-</div>
+<pre><code>Input: c = 5
+<strong>Output:
+</strong> true
+<strong>Explanation:
+</strong> 1 * 1 + 2 * 2 = 5</code></pre>
+
+**Example 2:**
+
+<pre><code>Input: c = 3
+<strong>Output:
+</strong> false</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `0 <= c <= 231 - 1`

@@ -1,40 +1,44 @@
-<h2>  Longest Common Subsequence</h2><hr><div><p>Given two strings <code>text1</code> and <code>text2</code>, return <em>the length of their longest <strong>common subsequence</strong>. </em>If there is no <strong>common subsequence</strong>, return <code>0</code>.</p>
+# Longest Common Subsequence
 
-<p>A <strong>subsequence</strong> of a string is a new string generated from the original string with some characters (can be none) deleted without changing the relative order of the remaining characters.</p>
+***
 
-<ul>
-	<li>For example, <code>"ace"</code> is a subsequence of <code>"abcde"</code>.</li>
-</ul>
+Given two strings `text1` and `text2`, return _the length of their longest **common subsequence**._ If there is no **common subsequence**, return `0`.
 
-<p>A <strong>common subsequence</strong> of two strings is a subsequence that is common to both strings.</p>
+A **subsequence** of a string is a new string generated from the original string with some characters (can be none) deleted without changing the relative order of the remaining characters.
 
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
+* For example, `"ace"` is a subsequence of `"abcde"`.
 
-<pre><strong>Input:</strong> text1 = "abcde", text2 = "ace" 
-<strong>Output:</strong> 3  
-<strong>Explanation:</strong> The longest common subsequence is "ace" and its length is 3.
-</pre>
+A **common subsequence** of two strings is a subsequence that is common to both strings.
 
-<p><strong>Example 2:</strong></p>
+&#x20;
 
-<pre><strong>Input:</strong> text1 = "abc", text2 = "abc"
-<strong>Output:</strong> 3
-<strong>Explanation:</strong> The longest common subsequence is "abc" and its length is 3.
-</pre>
+**Example 1:**
 
-<p><strong>Example 3:</strong></p>
+<pre><code>Input: text1 = "abcde", text2 = "ace" 
+<strong>Output:
+</strong> 3  
+<strong>Explanation:
+</strong> The longest common subsequence is "ace" and its length is 3.</code></pre>
 
-<pre><strong>Input:</strong> text1 = "abc", text2 = "def"
-<strong>Output:</strong> 0
-<strong>Explanation:</strong> There is no such common subsequence, so the result is 0.
-</pre>
+**Example 2:**
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+<pre><code>Input: text1 = "abc", text2 = "abc"
+<strong>Output:
+</strong> 3
+<strong>Explanation:
+</strong> The longest common subsequence is "abc" and its length is 3.</code></pre>
 
-<ul>
-	<li><code>1 &lt;= text1.length, text2.length &lt;= 1000</code></li>
-	<li><code>text1</code> and <code>text2</code> consist of only lowercase English characters.</li>
-</ul>
-</div>
+**Example 3:**
+
+<pre><code>Input: text1 = "abc", text2 = "def"
+<strong>Output:
+</strong> 0
+<strong>Explanation:
+</strong> There is no such common subsequence, so the result is 0.</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `1 <= text1.length, text2.length <= 1000`
+* `text1` and `text2` consist of only lowercase English characters.

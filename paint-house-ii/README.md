@@ -1,40 +1,42 @@
-<h2>  Paint House II</h2><hr><div><p>There are a row of <code>n</code> houses, each house can be painted with one of the <code>k</code> colors. The cost of painting each house with a certain color is different. You have to paint all the houses such that no two adjacent houses have the same color.</p>
+# Paint House II
 
-<p>The cost of painting each house with a certain color is represented by an <code>n x k</code> cost matrix costs.</p>
+***
 
-<ul>
-	<li>For example, <code>costs[0][0]</code> is the cost of painting house <code>0</code> with color <code>0</code>; <code>costs[1][2]</code> is the cost of painting house <code>1</code> with color <code>2</code>, and so on...</li>
-</ul>
+There are a row of `n` houses, each house can be painted with one of the `k` colors. The cost of painting each house with a certain color is different. You have to paint all the houses such that no two adjacent houses have the same color.
 
-<p>Return <em>the minimum cost to paint all houses</em>.</p>
+The cost of painting each house with a certain color is represented by an `n x k` cost matrix costs.
 
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
+* For example, `costs[0][0]` is the cost of painting house `0` with color `0`; `costs[1][2]` is the cost of painting house `1` with color `2`, and so on...
 
-<pre><strong>Input:</strong> costs = [[1,5,3],[2,9,4]]
-<strong>Output:</strong> 5
-<strong>Explanation:</strong>
-Paint house 0 into color 0, paint house 1 into color 2. Minimum cost: 1 + 4 = 5; 
-Or paint house 0 into color 2, paint house 1 into color 0. Minimum cost: 3 + 2 = 5.
-</pre>
+Return _the minimum cost to paint all houses_.
 
-<p><strong>Example 2:</strong></p>
+&#x20;
 
-<pre><strong>Input:</strong> costs = [[1,3],[2,4]]
-<strong>Output:</strong> 5
-</pre>
+**Example 1:**
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+<pre><code>Input: costs = [[1,5,3],[2,9,4]]
+<strong>Output:
+</strong> 5
+<strong>Explanation:
+</strong>Paint house 0 into color 0, paint house 1 into color 2. Minimum cost: 1 + 4 = 5; 
+Or paint house 0 into color 2, paint house 1 into color 0. Minimum cost: 3 + 2 = 5.</code></pre>
 
-<ul>
-	<li><code>costs.length == n</code></li>
-	<li><code>costs[i].length == k</code></li>
-	<li><code>1 &lt;= n &lt;= 100</code></li>
-	<li><code>2 &lt;= k &lt;= 20</code></li>
-	<li><code>1 &lt;= costs[i][j] &lt;= 20</code></li>
-</ul>
+**Example 2:**
 
-<p>&nbsp;</p>
-<p><strong>Follow up:</strong> Could you solve it in <code>O(nk)</code> runtime?</p>
-</div>
+<pre><code>Input: costs = [[1,3],[2,4]]
+<strong>Output:
+</strong> 5</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `costs.length == n`
+* `costs[i].length == k`
+* `1 <= n <= 100`
+* `2 <= k <= 20`
+* `1 <= costs[i][j] <= 20`
+
+&#x20;
+
+**Follow up:** Could you solve it in `O(nk)` runtime?

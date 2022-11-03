@@ -1,33 +1,36 @@
-<h2>  Letter Combinations of a Phone Number</h2><hr><div><p>Given a string containing digits from <code>2-9</code> inclusive, return all possible letter combinations that the number could represent. Return the answer in <strong>any order</strong>.</p>
+# Letter Combinations of a Phone Number
 
-<p>A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.</p>
+***
 
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Telephone-keypad2.svg/200px-Telephone-keypad2.svg.png" style="width: 200px; height: 162px;"></p>
+Given a string containing digits from `2-9` inclusive, return all possible letter combinations that the number could represent. Return the answer in **any order**.
 
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
+A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
 
-<pre><strong>Input:</strong> digits = "23"
-<strong>Output:</strong> ["ad","ae","af","bd","be","bf","cd","ce","cf"]
-</pre>
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Telephone-keypad2.svg/200px-Telephone-keypad2.svg.png)
 
-<p><strong>Example 2:</strong></p>
+&#x20;
 
-<pre><strong>Input:</strong> digits = ""
-<strong>Output:</strong> []
-</pre>
+**Example 1:**
 
-<p><strong>Example 3:</strong></p>
+<pre><code>Input: digits = "23"
+<strong>Output:
+</strong> ["ad","ae","af","bd","be","bf","cd","ce","cf"]</code></pre>
 
-<pre><strong>Input:</strong> digits = "2"
-<strong>Output:</strong> ["a","b","c"]
-</pre>
+**Example 2:**
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+<pre><code>Input: digits = ""
+<strong>Output:
+</strong> []</code></pre>
 
-<ul>
-	<li><code>0 &lt;= digits.length &lt;= 4</code></li>
-	<li><code>digits[i]</code> is a digit in the range <code>['2', '9']</code>.</li>
-</ul>
-</div>
+**Example 3:**
+
+<pre><code>Input: digits = "2"
+<strong>Output:
+</strong> ["a","b","c"]</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `0 <= digits.length <= 4`
+* `digits[i]` is a digit in the range `['2', '9']`.

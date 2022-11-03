@@ -1,30 +1,35 @@
-<h2><a href="https://leetcode.com/problems/contains-duplicate-ii/">219. Contains Duplicate II</a></h2><h3>Easy</h3><hr><div><p>Given an integer array <code>nums</code> and an integer <code>k</code>, return <code>true</code> if there are two <strong>distinct indices</strong> <code>i</code> and <code>j</code> in the array such that <code>nums[i] == nums[j]</code> and <code>abs(i - j) &lt;= k</code>.</p>
+# 219. Contains Duplicate II
 
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
+## Easy
 
-<pre><strong>Input:</strong> nums = [1,2,3,1], k = 3
-<strong>Output:</strong> true
-</pre>
+***
 
-<p><strong>Example 2:</strong></p>
+Given an integer array `nums` and an integer `k`, return `true` if there are two **distinct indices** `i` and `j` in the array such that `nums[i] == nums[j]` and `abs(i - j) <= k`.
 
-<pre><strong>Input:</strong> nums = [1,0,1,1], k = 1
-<strong>Output:</strong> true
-</pre>
+&#x20;
 
-<p><strong>Example 3:</strong></p>
+**Example 1:**
 
-<pre><strong>Input:</strong> nums = [1,2,3,1,2,3], k = 2
-<strong>Output:</strong> false
-</pre>
+<pre><code>Input: nums = [1,2,3,1], k = 3
+<strong>Output:
+</strong> true</code></pre>
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+**Example 2:**
 
-<ul>
-	<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>
-	<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
-	<li><code>0 &lt;= k &lt;= 10<sup>5</sup></code></li>
-</ul>
-</div>
+<pre><code>Input: nums = [1,0,1,1], k = 1
+<strong>Output:
+</strong> true</code></pre>
+
+**Example 3:**
+
+<pre><code>Input: nums = [1,2,3,1,2,3], k = 2
+<strong>Output:
+</strong> false</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `1 <= nums.length <= 105`
+* `-109 <= nums[i] <= 109`
+* `0 <= k <= 105`

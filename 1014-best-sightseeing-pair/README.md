@@ -1,28 +1,34 @@
-<h2><a href="https://leetcode.com/problems/best-sightseeing-pair/">1014. Best Sightseeing Pair</a></h2><h3>Medium</h3><hr><div><p>You are given an integer array <code>values</code> where values[i] represents the value of the <code>i<sup>th</sup></code> sightseeing spot. Two sightseeing spots <code>i</code> and <code>j</code> have a <strong>distance</strong> <code>j - i</code> between them.</p>
+# 1014. Best Sightseeing Pair
 
-<p>The score of a pair (<code>i &lt; j</code>) of sightseeing spots is <code>values[i] + values[j] + i - j</code>: the sum of the values of the sightseeing spots, minus the distance between them.</p>
+## Medium
 
-<p>Return <em>the maximum score of a pair of sightseeing spots</em>.</p>
+***
 
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
+You are given an integer array `values` where values\[i] represents the value of the `ith` sightseeing spot. Two sightseeing spots `i` and `j` have a **distance** `j - i` between them.
 
-<pre><strong>Input:</strong> values = [8,1,5,2,6]
-<strong>Output:</strong> 11
-<strong>Explanation:</strong> i = 0, j = 2, values[i] + values[j] + i - j = 8 + 5 + 0 - 2 = 11
-</pre>
+The score of a pair (`i < j`) of sightseeing spots is `values[i] + values[j] + i - j`: the sum of the values of the sightseeing spots, minus the distance between them.
 
-<p><strong>Example 2:</strong></p>
+Return _the maximum score of a pair of sightseeing spots_.
 
-<pre><strong>Input:</strong> values = [1,2]
-<strong>Output:</strong> 2
-</pre>
+&#x20;
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+**Example 1:**
 
-<ul>
-	<li><code>2 &lt;= values.length &lt;= 5 * 10<sup>4</sup></code></li>
-	<li><code>1 &lt;= values[i] &lt;= 1000</code></li>
-</ul>
-</div>
+<pre><code>Input: values = [8,1,5,2,6]
+<strong>Output:
+</strong> 11
+<strong>Explanation:
+</strong> i = 0, j = 2, values[i] + values[j] + i - j = 8 + 5 + 0 - 2 = 11</code></pre>
+
+**Example 2:**
+
+<pre><code>Input: values = [1,2]
+<strong>Output:
+</strong> 2</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `2 <= values.length <= 5 * 104`
+* `1 <= values[i] <= 1000`

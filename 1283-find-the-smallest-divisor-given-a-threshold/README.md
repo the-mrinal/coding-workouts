@@ -1,30 +1,36 @@
-<h2><a href="https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/">1283. Find the Smallest Divisor Given a Threshold</a></h2><h3>Medium</h3><hr><div><p>Given an array of integers <code>nums</code> and an integer <code>threshold</code>, we will choose a positive integer <code>divisor</code>, divide all the array by it, and sum the division's result. Find the <strong>smallest</strong> <code>divisor</code> such that the result mentioned above is less than or equal to <code>threshold</code>.</p>
+# 1283. Find the Smallest Divisor Given a Threshold
 
-<p>Each result of the division is rounded to the nearest integer greater than or equal to that element. (For example: <code>7/3 = 3</code> and <code>10/2 = 5</code>).</p>
+## Medium
 
-<p>The test cases are generated so&nbsp;that there will be an answer.</p>
+***
 
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
+Given an array of integers `nums` and an integer `threshold`, we will choose a positive integer `divisor`, divide all the array by it, and sum the division's result. Find the **smallest** `divisor` such that the result mentioned above is less than or equal to `threshold`.
 
-<pre><strong>Input:</strong> nums = [1,2,5,9], threshold = 6
-<strong>Output:</strong> 5
-<strong>Explanation:</strong> We can get a sum to 17 (1+2+5+9) if the divisor is 1. 
-If the divisor is 4 we can get a sum of 7 (1+1+2+3) and if the divisor is 5 the sum will be 5 (1+1+1+2). 
-</pre>
+Each result of the division is rounded to the nearest integer greater than or equal to that element. (For example: `7/3 = 3` and `10/2 = 5`).
 
-<p><strong>Example 2:</strong></p>
+The test cases are generated so that there will be an answer.
 
-<pre><strong>Input:</strong> nums = [44,22,33,11,1], threshold = 5
-<strong>Output:</strong> 44
-</pre>
+&#x20;
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+**Example 1:**
 
-<ul>
-	<li><code>1 &lt;= nums.length &lt;= 5 * 10<sup>4</sup></code></li>
-	<li><code>1 &lt;= nums[i] &lt;= 10<sup>6</sup></code></li>
-	<li><code>nums.length &lt;= threshold &lt;= 10<sup>6</sup></code></li>
-</ul>
-</div>
+<pre><code>Input: nums = [1,2,5,9], threshold = 6
+<strong>Output:
+</strong> 5
+<strong>Explanation:
+</strong> We can get a sum to 17 (1+2+5+9) if the divisor is 1. 
+If the divisor is 4 we can get a sum of 7 (1+1+2+3) and if the divisor is 5 the sum will be 5 (1+1+1+2). </code></pre>
+
+**Example 2:**
+
+<pre><code>Input: nums = [44,22,33,11,1], threshold = 5
+<strong>Output:
+</strong> 44</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `1 <= nums.length <= 5 * 104`
+* `1 <= nums[i] <= 106`
+* `nums.length <= threshold <= 106`

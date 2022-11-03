@@ -1,33 +1,41 @@
-<h2><a href="https://leetcode.com/problems/rearrange-string-k-distance-apart/">358. Rearrange String k Distance Apart</a></h2><h3>Hard</h3><hr><div><p>Given a string <code>s</code> and an integer <code>k</code>, rearrange <code>s</code> such that the same characters are <strong>at least</strong> distance <code>k</code> from each other. If it is not possible to rearrange the string, return an empty string <code>""</code>.</p>
+# 358. Rearrange String k Distance Apart
 
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
+## Hard
 
-<pre><strong>Input:</strong> s = "aabbcc", k = 3
-<strong>Output:</strong> "abcabc"
-<strong>Explanation:</strong> The same letters are at least a distance of 3 from each other.
-</pre>
+***
 
-<p><strong>Example 2:</strong></p>
+Given a string `s` and an integer `k`, rearrange `s` such that the same characters are **at least** distance `k` from each other. If it is not possible to rearrange the string, return an empty string `""`.
 
-<pre><strong>Input:</strong> s = "aaabc", k = 3
-<strong>Output:</strong> ""
-<strong>Explanation:</strong> It is not possible to rearrange the string.
-</pre>
+&#x20;
 
-<p><strong>Example 3:</strong></p>
+**Example 1:**
 
-<pre><strong>Input:</strong> s = "aaadbbcc", k = 2
-<strong>Output:</strong> "abacabcd"
-<strong>Explanation:</strong> The same letters are at least a distance of 2 from each other.
-</pre>
+<pre><code>Input: s = "aabbcc", k = 3
+<strong>Output:
+</strong> "abcabc"
+<strong>Explanation:
+</strong> The same letters are at least a distance of 3 from each other.</code></pre>
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+**Example 2:**
 
-<ul>
-	<li><code>1 &lt;= s.length &lt;= 3 * 10<sup>5</sup></code></li>
-	<li><code>s</code> consists of only lowercase English letters.</li>
-	<li><code>0 &lt;= k &lt;= s.length</code></li>
-</ul>
-</div>
+<pre><code>Input: s = "aaabc", k = 3
+<strong>Output:
+</strong> ""
+<strong>Explanation:
+</strong> It is not possible to rearrange the string.</code></pre>
+
+**Example 3:**
+
+<pre><code>Input: s = "aaadbbcc", k = 2
+<strong>Output:
+</strong> "abacabcd"
+<strong>Explanation:
+</strong> The same letters are at least a distance of 2 from each other.</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `1 <= s.length <= 3 * 105`
+* `s` consists of only lowercase English letters.
+* `0 <= k <= s.length`

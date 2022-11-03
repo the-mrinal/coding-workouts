@@ -1,34 +1,39 @@
-<h2>  Merge Two Sorted Lists</h2><hr><div><p>You are given the heads of two sorted linked lists <code>list1</code> and <code>list2</code>.</p>
+# Merge Two Sorted Lists
 
-<p>Merge the two lists in a one <strong>sorted</strong> list. The list should be made by splicing together the nodes of the first two lists.</p>
+***
 
-<p>Return <em>the head of the merged linked list</em>.</p>
+You are given the heads of two sorted linked lists `list1` and `list2`.
 
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2020/10/03/merge_ex1.jpg" style="width: 662px; height: 302px;">
-<pre><strong>Input:</strong> list1 = [1,2,4], list2 = [1,3,4]
-<strong>Output:</strong> [1,1,2,3,4,4]
-</pre>
+Merge the two lists in a one **sorted** list. The list should be made by splicing together the nodes of the first two lists.
 
-<p><strong>Example 2:</strong></p>
+Return _the head of the merged linked list_.
 
-<pre><strong>Input:</strong> list1 = [], list2 = []
-<strong>Output:</strong> []
-</pre>
+&#x20;
 
-<p><strong>Example 3:</strong></p>
+**Example 1:**
 
-<pre><strong>Input:</strong> list1 = [], list2 = [0]
-<strong>Output:</strong> [0]
-</pre>
+![](https://assets.leetcode.com/uploads/2020/10/03/merge\_ex1.jpg)
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+<pre><code>Input: list1 = [1,2,4], list2 = [1,3,4]
+<strong>Output:
+</strong> [1,1,2,3,4,4]</code></pre>
 
-<ul>
-	<li>The number of nodes in both lists is in the range <code>[0, 50]</code>.</li>
-	<li><code>-100 &lt;= Node.val &lt;= 100</code></li>
-	<li>Both <code>list1</code> and <code>list2</code> are sorted in <strong>non-decreasing</strong> order.</li>
-</ul>
-</div>
+**Example 2:**
+
+<pre><code>Input: list1 = [], list2 = []
+<strong>Output:
+</strong> []</code></pre>
+
+**Example 3:**
+
+<pre><code>Input: list1 = [], list2 = [0]
+<strong>Output:
+</strong> [0]</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* The number of nodes in both lists is in the range `[0, 50]`.
+* `-100 <= Node.val <= 100`
+* Both `list1` and `list2` are sorted in **non-decreasing** order.

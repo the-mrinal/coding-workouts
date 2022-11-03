@@ -1,19 +1,29 @@
-<h2><a href="https://leetcode.com/problems/valid-perfect-square/">367. Valid Perfect Square</a></h2><h3>Easy</h3><hr><div><p>Given a <strong>positive</strong> integer <i>num</i>, write a function which returns True if <i>num</i> is a perfect square else False.</p>
+# 367. Valid Perfect Square
 
-<p><b>Follow up:</b> <b>Do not</b> use any built-in library function such as <code>sqrt</code>.</p>
+## Easy
 
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong> num = 16
-<strong>Output:</strong> true
-</pre><p><strong>Example 2:</strong></p>
-<pre><strong>Input:</strong> num = 14
-<strong>Output:</strong> false
-</pre>
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+***
 
-<ul>
-	<li><code>1 &lt;= num &lt;= 2^31 - 1</code></li>
-</ul>
-</div>
+Given a **positive** integer _num_, write a function which returns True if _num_ is a perfect square else False.
+
+**Follow up:** **Do not** use any built-in library function such as `sqrt`.
+
+&#x20;
+
+**Example 1:**
+
+<pre><code>Input: num = 16
+<strong>Output:
+</strong> true</code></pre>
+
+**Example 2:**
+
+<pre><code>Input: num = 14
+<strong>Output:
+</strong> false</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `1 <= num <= 2^31 - 1`

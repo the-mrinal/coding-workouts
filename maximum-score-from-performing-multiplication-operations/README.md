@@ -1,47 +1,51 @@
-<h2>  Maximum Score from Performing Multiplication Operations</h2><hr><div><p>You are given two integer arrays <code>nums</code> and <code>multipliers</code><strong> </strong>of size <code>n</code> and <code>m</code> respectively, where <code>n &gt;= m</code>. The arrays are <strong>1-indexed</strong>.</p>
+# Maximum Score from Performing Multiplication Operations
 
-<p>You begin with a score of <code>0</code>. You want to perform <strong>exactly</strong> <code>m</code> operations. On the <code>i<sup>th</sup></code> operation <strong>(1-indexed)</strong>, you will:</p>
+***
 
-<ul>
-	<li>Choose one integer <code>x</code> from <strong>either the start or the end </strong>of the array <code>nums</code>.</li>
-	<li>Add <code>multipliers[i] * x</code> to your score.</li>
-	<li>Remove <code>x</code> from the array <code>nums</code>.</li>
-</ul>
+You are given two integer arrays `nums` and `multipliers` **** of size `n` and `m` respectively, where `n >= m`. The arrays are **1-indexed**.
 
-<p>Return <em>the <strong>maximum</strong> score after performing </em><code>m</code> <em>operations.</em></p>
+You begin with a score of `0`. You want to perform **exactly** `m` operations. On the `ith` operation **(1-indexed)**, you will:
 
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
+* Choose one integer `x` from **either the start or the end** of the array `nums`.
+* Add `multipliers[i] * x` to your score.
+* Remove `x` from the array `nums`.
 
-<pre><strong>Input:</strong> nums = [1,2,3], multipliers = [3,2,1]
-<strong>Output:</strong> 14
-<strong>Explanation:</strong>&nbsp;An optimal solution is as follows:
-- Choose from the end, [1,2,<strong><u>3</u></strong>], adding 3 * 3 = 9 to the score.
-- Choose from the end, [1,<strong><u>2</u></strong>], adding 2 * 2 = 4 to the score.
-- Choose from the end, [<strong><u>1</u></strong>], adding 1 * 1 = 1 to the score.
-The total score is 9 + 4 + 1 = 14.</pre>
+Return _the **maximum** score after performing_ `m` _operations._
 
-<p><strong>Example 2:</strong></p>
+&#x20;
 
-<pre><strong>Input:</strong> nums = [-5,-3,-3,-2,7,1], multipliers = [-10,-5,3,4,6]
-<strong>Output:</strong> 102
-<strong>Explanation: </strong>An optimal solution is as follows:
-- Choose from the start, [<u><strong>-5</strong></u>,-3,-3,-2,7,1], adding -5 * -10 = 50 to the score.
-- Choose from the start, [<strong><u>-3</u></strong>,-3,-2,7,1], adding -3 * -5 = 15 to the score.
-- Choose from the start, [<strong><u>-3</u></strong>,-2,7,1], adding -3 * 3 = -9 to the score.
-- Choose from the end, [-2,7,<strong><u>1</u></strong>], adding 1 * 4 = 4 to the score.
-- Choose from the end, [-2,<strong><u>7</u></strong>], adding 7 * 6 = 42 to the score. 
-The total score is 50 + 15 - 9 + 4 + 42 = 102.
-</pre>
+**Example 1:**
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+<pre><code>Input: nums = [1,2,3], multipliers = [3,2,1]
+<strong>Output:
+</strong> 14
+<strong>Explanation:
+</strong> An optimal solution is as follows:
+- Choose from the end, [1,2,3], adding 3 * 3 = 9 to the score.
+- Choose from the end, [1,2], adding 2 * 2 = 4 to the score.
+- Choose from the end, [1], adding 1 * 1 = 1 to the score.
+The total score is 9 + 4 + 1 = 14.</code></pre>
 
-<ul>
-	<li><code>n == nums.length</code></li>
-	<li><code>m == multipliers.length</code></li>
-	<li><code>1 &lt;= m &lt;= 10<sup>3</sup></code></li>
-	<li><code>m &lt;= n &lt;= 10<sup>5</sup></code><code> </code></li>
-	<li><code>-1000 &lt;= nums[i], multipliers[i] &lt;= 1000</code></li>
-</ul>
-</div>
+**Example 2:**
+
+<pre><code>Input: nums = [-5,-3,-3,-2,7,1], multipliers = [-10,-5,3,4,6]
+<strong>Output:
+</strong> 102
+<strong>Explanation: 
+</strong>An optimal solution is as follows:
+- Choose from the start, [-5,-3,-3,-2,7,1], adding -5 * -10 = 50 to the score.
+- Choose from the start, [-3,-3,-2,7,1], adding -3 * -5 = 15 to the score.
+- Choose from the start, [-3,-2,7,1], adding -3 * 3 = -9 to the score.
+- Choose from the end, [-2,7,1], adding 1 * 4 = 4 to the score.
+- Choose from the end, [-2,7], adding 7 * 6 = 42 to the score. 
+The total score is 50 + 15 - 9 + 4 + 42 = 102.</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `n == nums.length`
+* `m == multipliers.length`
+* `1 <= m <= 103`
+* `m <= n <= 105`
+* `-1000 <= nums[i], multipliers[i] <= 1000`

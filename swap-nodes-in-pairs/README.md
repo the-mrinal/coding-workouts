@@ -1,29 +1,34 @@
-<h2>  Swap Nodes in Pairs</h2><hr><div><p>Given a&nbsp;linked list, swap every two adjacent nodes and return its head. You must solve the problem without&nbsp;modifying the values in the list's nodes (i.e., only nodes themselves may be changed.)</p>
+# Swap Nodes in Pairs
 
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2020/10/03/swap_ex1.jpg" style="width: 422px; height: 222px;">
-<pre><strong>Input:</strong> head = [1,2,3,4]
-<strong>Output:</strong> [2,1,4,3]
-</pre>
+***
 
-<p><strong>Example 2:</strong></p>
+Given a linked list, swap every two adjacent nodes and return its head. You must solve the problem without modifying the values in the list's nodes (i.e., only nodes themselves may be changed.)
 
-<pre><strong>Input:</strong> head = []
-<strong>Output:</strong> []
-</pre>
+&#x20;
 
-<p><strong>Example 3:</strong></p>
+**Example 1:**
 
-<pre><strong>Input:</strong> head = [1]
-<strong>Output:</strong> [1]
-</pre>
+![](https://assets.leetcode.com/uploads/2020/10/03/swap\_ex1.jpg)
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+<pre><code>Input: head = [1,2,3,4]
+<strong>Output:
+</strong> [2,1,4,3]</code></pre>
 
-<ul>
-	<li>The number of nodes in the&nbsp;list&nbsp;is in the range <code>[0, 100]</code>.</li>
-	<li><code>0 &lt;= Node.val &lt;= 100</code></li>
-</ul>
-</div>
+**Example 2:**
+
+<pre><code>Input: head = []
+<strong>Output:
+</strong> []</code></pre>
+
+**Example 3:**
+
+<pre><code>Input: head = [1]
+<strong>Output:
+</strong> [1]</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* The number of nodes in the list is in the range `[0, 100]`.
+* `0 <= Node.val <= 100`

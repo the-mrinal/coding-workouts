@@ -1,27 +1,33 @@
-<h2><a href="https://leetcode.com/problems/subarray-product-less-than-k/">713. Subarray Product Less Than K</a></h2><h3>Medium</h3><hr><div><p>Given an array of integers <code>nums</code> and an integer <code>k</code>, return <em>the number of contiguous subarrays where the product of all the elements in the subarray is strictly less than </em><code>k</code>.</p>
+# 713. Subarray Product Less Than K
 
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
+## Medium
 
-<pre><strong>Input:</strong> nums = [10,5,2,6], k = 100
-<strong>Output:</strong> 8
-<strong>Explanation:</strong> The 8 subarrays that have product less than 100 are:
+***
+
+Given an array of integers `nums` and an integer `k`, return _the number of contiguous subarrays where the product of all the elements in the subarray is strictly less than_ `k`.
+
+&#x20;
+
+**Example 1:**
+
+<pre><code>Input: nums = [10,5,2,6], k = 100
+<strong>Output:
+</strong> 8
+<strong>Explanation:
+</strong> The 8 subarrays that have product less than 100 are:
 [10], [5], [2], [6], [10, 5], [5, 2], [2, 6], [5, 2, 6]
-Note that [10, 5, 2] is not included as the product of 100 is not strictly less than k.
-</pre>
+Note that [10, 5, 2] is not included as the product of 100 is not strictly less than k.</code></pre>
 
-<p><strong>Example 2:</strong></p>
+**Example 2:**
 
-<pre><strong>Input:</strong> nums = [1,2,3], k = 0
-<strong>Output:</strong> 0
-</pre>
+<pre><code>Input: nums = [1,2,3], k = 0
+<strong>Output:
+</strong> 0</code></pre>
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+&#x20;
 
-<ul>
-	<li><code>1 &lt;= nums.length &lt;= 3 * 10<sup>4</sup></code></li>
-	<li><code>1 &lt;= nums[i] &lt;= 1000</code></li>
-	<li><code>0 &lt;= k &lt;= 10<sup>6</sup></code></li>
-</ul>
-</div>
+**Constraints:**
+
+* `1 <= nums.length <= 3 * 104`
+* `1 <= nums[i] <= 1000`
+* `0 <= k <= 106`

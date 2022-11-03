@@ -1,33 +1,39 @@
-<h2><a href="https://leetcode.com/problems/partitioning-into-minimum-number-of-deci-binary-numbers/">1689. Partitioning Into Minimum Number Of Deci-Binary Numbers</a></h2><h3>Medium</h3><hr><div><p>A decimal number is called <strong>deci-binary</strong> if each of its digits is either <code>0</code> or <code>1</code> without any leading zeros. For example, <code>101</code> and <code>1100</code> are <strong>deci-binary</strong>, while <code>112</code> and <code>3001</code> are not.</p>
+# 1689. Partitioning Into Minimum Number Of Deci-Binary Numbers
 
-<p>Given a string <code>n</code> that represents a positive decimal integer, return <em>the <strong>minimum</strong> number of positive <strong>deci-binary</strong> numbers needed so that they sum up to </em><code>n</code><em>.</em></p>
+## Medium
 
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
+***
 
-<pre><strong>Input:</strong> n = "32"
-<strong>Output:</strong> 3
-<strong>Explanation:</strong> 10 + 11 + 11 = 32
-</pre>
+A decimal number is called **deci-binary** if each of its digits is either `0` or `1` without any leading zeros. For example, `101` and `1100` are **deci-binary**, while `112` and `3001` are not.
 
-<p><strong>Example 2:</strong></p>
+Given a string `n` that represents a positive decimal integer, return _the **minimum** number of positive **deci-binary** numbers needed so that they sum up to_ `n`_._
 
-<pre><strong>Input:</strong> n = "82734"
-<strong>Output:</strong> 8
-</pre>
+&#x20;
 
-<p><strong>Example 3:</strong></p>
+**Example 1:**
 
-<pre><strong>Input:</strong> n = "27346209830709182346"
-<strong>Output:</strong> 9
-</pre>
+<pre><code>Input: n = "32"
+<strong>Output:
+</strong> 3
+<strong>Explanation:
+</strong> 10 + 11 + 11 = 32</code></pre>
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+**Example 2:**
 
-<ul>
-	<li><code>1 &lt;= n.length &lt;= 10<sup>5</sup></code></li>
-	<li><code>n</code> consists of only digits.</li>
-	<li><code>n</code> does not contain any leading zeros and represents a positive integer.</li>
-</ul>
-</div>
+<pre><code>Input: n = "82734"
+<strong>Output:
+</strong> 8</code></pre>
+
+**Example 3:**
+
+<pre><code>Input: n = "27346209830709182346"
+<strong>Output:
+</strong> 9</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `1 <= n.length <= 105`
+* `n` consists of only digits.
+* `n` does not contain any leading zeros and represents a positive integer.

@@ -1,30 +1,35 @@
-<h2><a href="https://leetcode.com/problems/reverse-integer/">7. Reverse Integer</a></h2><h3>Medium</h3><hr><div><p>Given a signed 32-bit integer <code>x</code>, return <code>x</code><em> with its digits reversed</em>. If reversing <code>x</code> causes the value to go outside the signed 32-bit integer range <code>[-2<sup>31</sup>, 2<sup>31</sup> - 1]</code>, then return <code>0</code>.</p>
+# 7. Reverse Integer
 
-<p><strong>Assume the environment does not allow you to store 64-bit integers (signed or unsigned).</strong></p>
+## Medium
 
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
+***
 
-<pre><strong>Input:</strong> x = 123
-<strong>Output:</strong> 321
-</pre>
+Given a signed 32-bit integer `x`, return `x` _with its digits reversed_. If reversing `x` causes the value to go outside the signed 32-bit integer range `[-231, 231 - 1]`, then return `0`.
 
-<p><strong>Example 2:</strong></p>
+**Assume the environment does not allow you to store 64-bit integers (signed or unsigned).**
 
-<pre><strong>Input:</strong> x = -123
-<strong>Output:</strong> -321
-</pre>
+&#x20;
 
-<p><strong>Example 3:</strong></p>
+**Example 1:**
 
-<pre><strong>Input:</strong> x = 120
-<strong>Output:</strong> 21
-</pre>
+<pre><code>Input: x = 123
+<strong>Output:
+</strong> 321</code></pre>
 
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+**Example 2:**
 
-<ul>
-	<li><code>-2<sup>31</sup> &lt;= x &lt;= 2<sup>31</sup> - 1</code></li>
-</ul>
-</div>
+<pre><code>Input: x = -123
+<strong>Output:
+</strong> -321</code></pre>
+
+**Example 3:**
+
+<pre><code>Input: x = 120
+<strong>Output:
+</strong> 21</code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* `-231 <= x <= 231 - 1`
